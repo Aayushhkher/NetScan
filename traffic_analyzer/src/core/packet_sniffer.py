@@ -124,7 +124,9 @@ class PacketSniffer(QObject):
                 '-e', 'ip.dst',
                 '-e', '_ws.col.protocol',
                 '-e', 'frame.len',
-                '-e', '_ws.col.info'
+                '-e', '_ws.col.info',
+                '-e', 'frame.len',  # Add frame length again to ensure we get it
+                '-e', 'ip.len'      # Add IP length to cross-verify
             ]
             
             # Add filter if specified
@@ -213,7 +215,7 @@ class PacketSniffer(QObject):
                 try:
                     # Parse comma-separated fields
                     fields = line.strip().split(',')
-                    if len(fields) >= 7:
+                    if len(fields) >= 9:  # Updated for new fields
                         try:
                             number = int(fields[0]) if fields[0] else 0
                         except ValueError:
@@ -238,8 +240,11 @@ class PacketSniffer(QObject):
                         dst_ip = fields[3] if fields[3] else 'Unknown'
                         protocol = fields[4] if fields[4] else 'Unknown'
                         
+                        # Try both frame.len and ip.len for packet size
                         try:
-                            length = int(fields[5]) if fields[5] else 0
+                            frame_len = int(fields[7]) if fields[7] else 0
+                            ip_len = int(fields[8]) if fields[8] else 0
+                            length = max(frame_len, ip_len)  # Use the larger value
                         except ValueError:
                             length = 0
                             
@@ -257,6 +262,10 @@ class PacketSniffer(QObject):
                             'flags': '',
                             'bytes': length
                         }
+                        
+                        # Log packet size for debugging
+                        if length > 0:
+                            self.logger.debug(f"Packet captured - Size: {length} bytes")
                         
                         # Analyze packet safety
                         safety_info = self._analyze_packet_safety(packet)

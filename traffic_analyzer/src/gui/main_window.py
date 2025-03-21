@@ -424,3 +424,16 @@ class MainWindow(QMainWindow):
         if self.packet_sniffer.is_capturing:
             self.toggle_capture()  # Stop
             self.toggle_capture()  # Start with new filter 
+
+    def set_interface(self, interface):
+        """Set the network interface for packet capture."""
+        if interface in self.packet_sniffer.get_interfaces():
+            self.interface_combo.setCurrentText(interface)
+            self.logger.info(f"Interface set to: {interface}")
+        else:
+            self.logger.warning(f"Interface {interface} not found")
+
+    def set_filter(self, filter_text):
+        """Set the packet capture filter."""
+        self.filter_input.setText(filter_text)
+        self.logger.info(f"Filter set to: {filter_text}") 
