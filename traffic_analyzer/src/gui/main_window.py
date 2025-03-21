@@ -76,21 +76,48 @@ class MainWindow(QMainWindow):
         # Create top control panel
         control_panel = QFrame()
         control_panel.setFrameStyle(QFrame.Shape.StyledPanel | QFrame.Shadow.Raised)
-        control_layout = QHBoxLayout(control_panel)
+        control_layout = QVBoxLayout(control_panel)  # Changed to VBoxLayout for better organization
+        
+        # Top row for interface and basic controls
+        top_row = QHBoxLayout()
         
         # Interface selection
         interface_label = QLabel("Interface:")
         self.interface_combo = QComboBox()
+        self.interface_combo.setMinimumWidth(200)
+        self.interface_combo.setStyleSheet("""
+            QComboBox {
+                padding: 5px;
+                border: 1px solid #dee2e6;
+                border-radius: 4px;
+                background-color: white;
+            }
+            QComboBox:hover {
+                border-color: #adb5bd;
+            }
+        """)
         self.refresh_interfaces()
-        control_layout.addWidget(interface_label)
-        control_layout.addWidget(self.interface_combo)
+        top_row.addWidget(interface_label)
+        top_row.addWidget(self.interface_combo)
         
         # Filter input
         filter_label = QLabel("Filter:")
         self.filter_input = QLineEdit()
         self.filter_input.setPlaceholderText("Enter BPF filter...")
-        control_layout.addWidget(filter_label)
-        control_layout.addWidget(self.filter_input)
+        self.filter_input.setMinimumWidth(200)
+        self.filter_input.setStyleSheet("""
+            QLineEdit {
+                padding: 5px;
+                border: 1px solid #dee2e6;
+                border-radius: 4px;
+                background-color: white;
+            }
+            QLineEdit:hover {
+                border-color: #adb5bd;
+            }
+        """)
+        top_row.addWidget(filter_label)
+        top_row.addWidget(self.filter_input)
         
         # Start/Stop button
         self.start_button = QPushButton("Start Capture")
@@ -107,7 +134,7 @@ class MainWindow(QMainWindow):
                 background-color: #218838;
             }
         """)
-        control_layout.addWidget(self.start_button)
+        top_row.addWidget(self.start_button)
         
         # Download Sessions button
         self.download_button = QPushButton("Download Sessions")
@@ -124,12 +151,56 @@ class MainWindow(QMainWindow):
                 background-color: #0056b3;
             }
         """)
-        control_layout.addWidget(self.download_button)
+        top_row.addWidget(self.download_button)
+        
+        control_layout.addLayout(top_row)
+        
+        # Filter buttons row
+        filter_buttons_layout = QHBoxLayout()
+        
+        # Create filter buttons
+        filter_buttons = [
+            ("TCP", "tcp"),
+            ("UDP", "udp"),
+            ("HTTP", "http"),
+            ("DNS", "dns"),
+            ("ICMP", "icmp"),
+            ("HTTPS", "tls"),
+            ("ARP", "arp"),
+            ("Clear", "")
+        ]
+        
+        for label, filter_text in filter_buttons:
+            button = QPushButton(label)
+            if filter_text:
+                button.clicked.connect(lambda checked, ft=filter_text: self.apply_filter(ft))
+            else:
+                button.clicked.connect(lambda: self.filter_input.clear())
+            
+            button.setStyleSheet("""
+                QPushButton {
+                    background-color: #f8f9fa;
+                    border: 1px solid #dee2e6;
+                    border-radius: 4px;
+                    padding: 5px 10px;
+                    min-width: 60px;
+                }
+                QPushButton:hover {
+                    background-color: #e9ecef;
+                }
+                QPushButton:pressed {
+                    background-color: #dee2e6;
+                }
+            """)
+            filter_buttons_layout.addWidget(button)
+        
+        control_layout.addLayout(filter_buttons_layout)
         
         # Add control panel to main layout
         main_layout.addWidget(control_panel)
         
-        # Add dashboard
+        # Add dashboard with increased size
+        self.dashboard.setMinimumHeight(400)  # Increased height for better visibility
         main_layout.addWidget(self.dashboard)
         
         # Create tab widget for packet list and other views
@@ -142,6 +213,18 @@ class MainWindow(QMainWindow):
         # Setup packet table
         self.packet_table = QTableWidget()
         self.setup_packet_table()
+        self.packet_table.setStyleSheet("""
+            QTableWidget {
+                gridline-color: #dee2e6;
+                border: 1px solid #dee2e6;
+            }
+            QHeaderView::section {
+                background-color: #f8f9fa;
+                padding: 4px;
+                border: 1px solid #dee2e6;
+                font-weight: bold;
+            }
+        """)
         packet_layout.addWidget(self.packet_table)
         
         tab_widget.addTab(packet_tab, "Packets")

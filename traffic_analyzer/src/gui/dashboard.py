@@ -94,39 +94,41 @@ class DashboardWidget(QWidget):
         # Protocol Distribution Chart
         protocol_frame = QFrame()
         protocol_frame.setFrameStyle(QFrame.Shape.StyledPanel | QFrame.Shadow.Raised)
-        protocol_frame.setStyleSheet("background-color: white; border-radius: 8px;")
+        protocol_frame.setStyleSheet("""
+            QFrame {
+                background-color: white;
+                border-radius: 8px;
+                padding: 10px;
+            }
+        """)
         protocol_layout = QVBoxLayout(protocol_frame)
         
-        self.protocol_fig = Figure(figsize=(6, 4), dpi=100)
+        # Create larger figure for protocol chart
+        self.protocol_fig = Figure(figsize=(8, 6), dpi=100)
         self.protocol_ax = self.protocol_fig.add_subplot(111)
         self.protocol_canvas = FigureCanvas(self.protocol_fig)
         protocol_layout.addWidget(self.protocol_canvas)
         
-        # Add title label
-        protocol_title = QLabel("Protocol Distribution")
-        protocol_title.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        protocol_title.setStyleSheet("font-size: 16px; font-weight: bold; color: #495057;")
-        protocol_layout.insertWidget(0, protocol_title)
-        
-        charts_layout.addWidget(protocol_frame)
-        
         # Timeline Chart
         timeline_frame = QFrame()
         timeline_frame.setFrameStyle(QFrame.Shape.StyledPanel | QFrame.Shadow.Raised)
-        timeline_frame.setStyleSheet("background-color: white; border-radius: 8px;")
+        timeline_frame.setStyleSheet("""
+            QFrame {
+                background-color: white;
+                border-radius: 8px;
+                padding: 10px;
+            }
+        """)
         timeline_layout = QVBoxLayout(timeline_frame)
         
-        self.timeline_fig = Figure(figsize=(6, 4), dpi=100)
+        # Create larger figure for timeline chart
+        self.timeline_fig = Figure(figsize=(8, 6), dpi=100)
         self.timeline_ax = self.timeline_fig.add_subplot(111)
         self.timeline_canvas = FigureCanvas(self.timeline_fig)
         timeline_layout.addWidget(self.timeline_canvas)
         
-        # Add title label
-        timeline_title = QLabel("Network Activity")
-        timeline_title.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        timeline_title.setStyleSheet("font-size: 16px; font-weight: bold; color: #495057;")
-        timeline_layout.insertWidget(0, timeline_title)
-        
+        # Add charts to layout
+        charts_layout.addWidget(protocol_frame)
         charts_layout.addWidget(timeline_frame)
         
         layout.addLayout(charts_layout)
@@ -137,59 +139,35 @@ class DashboardWidget(QWidget):
         # Protocol Table
         protocol_table_frame = QFrame()
         protocol_table_frame.setFrameStyle(QFrame.Shape.StyledPanel | QFrame.Shadow.Raised)
-        protocol_table_frame.setStyleSheet("background-color: white; border-radius: 8px;")
         protocol_table_layout = QVBoxLayout(protocol_table_frame)
         
-        protocol_table_title = QLabel("Protocol Statistics")
-        protocol_table_title.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        protocol_table_title.setStyleSheet("font-size: 16px; font-weight: bold; color: #495057;")
-        protocol_table_layout.addWidget(protocol_table_title)
+        protocol_table_label = QLabel("Protocol Statistics")
+        protocol_table_label.setStyleSheet("font-size: 14px; font-weight: bold; margin-bottom: 5px;")
+        protocol_table_layout.addWidget(protocol_table_label)
         
         self.protocol_table = QTableWidget()
         self.protocol_table.setColumnCount(3)
-        self.protocol_table.setHorizontalHeaderLabels(["Protocol", "Count", "Size"])
-        self.protocol_table.setStyleSheet("""
-            QTableWidget {
-                gridline-color: #dee2e6;
-                border: none;
-            }
-            QHeaderView::section {
-                background-color: #f8f9fa;
-                padding: 4px;
-                border: 1px solid #dee2e6;
-                font-weight: bold;
-            }
-        """)
+        self.protocol_table.setHorizontalHeaderLabels(['Protocol', 'Count', 'Size'])
+        self.protocol_table.horizontalHeader().setStretchLastSection(True)
         protocol_table_layout.addWidget(self.protocol_table)
-        tables_layout.addWidget(protocol_table_frame)
         
         # Connections Table
         connections_table_frame = QFrame()
         connections_table_frame.setFrameStyle(QFrame.Shape.StyledPanel | QFrame.Shadow.Raised)
-        connections_table_frame.setStyleSheet("background-color: white; border-radius: 8px;")
         connections_table_layout = QVBoxLayout(connections_table_frame)
         
-        connections_table_title = QLabel("Active Connections")
-        connections_table_title.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        connections_table_title.setStyleSheet("font-size: 16px; font-weight: bold; color: #495057;")
-        connections_table_layout.addWidget(connections_table_title)
+        connections_table_label = QLabel("Recent Connections")
+        connections_table_label.setStyleSheet("font-size: 14px; font-weight: bold; margin-bottom: 5px;")
+        connections_table_layout.addWidget(connections_table_label)
         
         self.connections_table = QTableWidget()
         self.connections_table.setColumnCount(4)
-        self.connections_table.setHorizontalHeaderLabels(["Source", "Destination", "Protocol", "Status"])
-        self.connections_table.setStyleSheet("""
-            QTableWidget {
-                gridline-color: #dee2e6;
-                border: none;
-            }
-            QHeaderView::section {
-                background-color: #f8f9fa;
-                padding: 4px;
-                border: 1px solid #dee2e6;
-                font-weight: bold;
-            }
-        """)
+        self.connections_table.setHorizontalHeaderLabels(['Source', 'Destination', 'Protocol', 'Status'])
+        self.connections_table.horizontalHeader().setStretchLastSection(True)
         connections_table_layout.addWidget(self.connections_table)
+        
+        # Add tables to layout
+        tables_layout.addWidget(protocol_table_frame)
         tables_layout.addWidget(connections_table_frame)
         
         layout.addLayout(tables_layout)
