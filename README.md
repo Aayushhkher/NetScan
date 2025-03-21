@@ -1,4 +1,4 @@
-# Network Traffic Analyzer
+# NetScan
 
 A real-time network traffic analyzer with a modern GUI interface built in Python. Captures and displays network packets using TShark, showing protocols, IPs, and statistics. Features interactive filtering, protocol analysis, and a live dashboard for network monitoring.
 
@@ -11,6 +11,8 @@ A real-time network traffic analyzer with a modern GUI interface built in Python
 - Detailed packet information display
 - Network interface selection
 - Custom BPF filter support
+- Session management and data persistence
+- Interactive packet analysis tools
 
 ## Requirements
 
@@ -19,19 +21,22 @@ A real-time network traffic analyzer with a modern GUI interface built in Python
 - TShark (Wireshark)
 - Matplotlib
 - Pandas
+- Scapy
+- Click
+- Rich
 
 ## Installation
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Aayushhkher/network-traffic-analyzer.git
-cd network-traffic-analyzer
+git clone https://github.com/Aayushhkher/NetScan.git
+cd NetScan
 ```
 
 2. Create and activate a virtual environment:
 ```bash
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+python -m venv .venv311
+source .venv311/bin/activate  # On Windows: .venv311\Scripts\activate
 ```
 
 3. Install dependencies:
@@ -48,8 +53,22 @@ pip install -r requirements.txt
 
 Run the application with sudo privileges (required for packet capture):
 ```bash
-sudo python3.11 run_analyzer.py --gui
+sudo python -m traffic_analyzer
 ```
+
+Or with specific options:
+```bash
+sudo python -m traffic_analyzer --interface eth0 --filter "tcp port 80" --gui
+```
+
+## Features in Detail
+
+- **Real-time Monitoring**: Live capture and display of network traffic
+- **Protocol Analysis**: Detailed breakdown of various network protocols
+- **Filtering**: Support for both GUI-based and BPF filters
+- **Statistics**: Live graphs and statistics for network usage
+- **Session Management**: Save and load capture sessions
+- **Export**: Export captured data for further analysis
 
 ## License
 
