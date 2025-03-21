@@ -1,7 +1,7 @@
 from PyQt6.QtWidgets import (QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
                              QPushButton, QLabel, QComboBox, QLineEdit, QTableWidget,
                              QTableWidgetItem, QMessageBox, QFileDialog, QTabWidget,
-                             QButtonGroup, QFrame, QSizePolicy)
+                             QButtonGroup, QFrame, QSizePolicy, QDialog, QListWidget)
 from PyQt6.QtCore import Qt, QTimer, QMetaObject, Q_ARG, pyqtSlot
 from PyQt6.QtGui import QAction, QFont
 import matplotlib.pyplot as plt
@@ -15,6 +15,8 @@ from traffic_analyzer.src.gui.dashboard import DashboardWidget
 import json
 import logging
 import time
+import os
+import shutil
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -69,104 +71,28 @@ class MainWindow(QMainWindow):
         # Create central widget and main layout
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
-        layout = QVBoxLayout(central_widget)
+        main_layout = QVBoxLayout(central_widget)
         
-        # Control Panel
-        control_panel = QHBoxLayout()
+        # Create top control panel
+        control_panel = QFrame()
+        control_panel.setFrameStyle(QFrame.Shape.StyledPanel | QFrame.Shadow.Raised)
+        control_layout = QHBoxLayout(control_panel)
         
-        # Interface Selection
+        # Interface selection
         interface_label = QLabel("Interface:")
         self.interface_combo = QComboBox()
-        self.interface_combo.setMinimumWidth(200)
-        self.interface_combo.setStyleSheet("""
-            QComboBox {
-                padding: 5px;
-                border: 1px solid #dee2e6;
-                border-radius: 4px;
-                background-color: white;
-            }
-            QComboBox:hover {
-                border-color: #adb5bd;
-            }
-        """)
+        self.refresh_interfaces()
+        control_layout.addWidget(interface_label)
+        control_layout.addWidget(self.interface_combo)
         
-        # Refresh button for interfaces
-        refresh_button = QPushButton("⟳")
-        refresh_button.setFixedWidth(30)
-        refresh_button.clicked.connect(self.refresh_interfaces)
-        refresh_button.setStyleSheet("""
-            QPushButton {
-                background-color: #f8f9fa;
-                border: 1px solid #dee2e6;
-                border-radius: 4px;
-            }
-            QPushButton:hover {
-                background-color: #e9ecef;
-            }
-        """)
-        
-        # Add interface selection to control panel
-        control_panel.addWidget(interface_label)
-        control_panel.addWidget(self.interface_combo)
-        control_panel.addWidget(refresh_button)
-        
-        # Filter Input
+        # Filter input
         filter_label = QLabel("Filter:")
         self.filter_input = QLineEdit()
         self.filter_input.setPlaceholderText("Enter BPF filter...")
-        self.filter_input.setMinimumWidth(200)
-        self.filter_input.setStyleSheet("""
-            QLineEdit {
-                padding: 5px;
-                border: 1px solid #dee2e6;
-                border-radius: 4px;
-                background-color: white;
-            }
-            QLineEdit:hover {
-                border-color: #adb5bd;
-            }
-        """)
+        control_layout.addWidget(filter_label)
+        control_layout.addWidget(self.filter_input)
         
-        control_panel.addWidget(filter_label)
-        control_panel.addWidget(self.filter_input)
-        
-        # Filter Buttons
-        filter_buttons_layout = QHBoxLayout()
-        
-        tcp_filter = QPushButton("TCP")
-        tcp_filter.clicked.connect(lambda: self.apply_filter("tcp"))
-        
-        udp_filter = QPushButton("UDP")
-        udp_filter.clicked.connect(lambda: self.apply_filter("udp"))
-        
-        http_filter = QPushButton("HTTP")
-        http_filter.clicked.connect(lambda: self.apply_filter("http"))
-        
-        dns_filter = QPushButton("DNS")
-        dns_filter.clicked.connect(lambda: self.apply_filter("dns"))
-        
-        icmp_filter = QPushButton("ICMP")
-        icmp_filter.clicked.connect(lambda: self.apply_filter("icmp"))
-        
-        clear_filter = QPushButton("Clear")
-        clear_filter.clicked.connect(lambda: self.filter_input.clear())
-        
-        # Add filter buttons to layout
-        for button in [tcp_filter, udp_filter, http_filter, dns_filter, icmp_filter, clear_filter]:
-            button.setStyleSheet("""
-                QPushButton {
-                    background-color: #f8f9fa;
-                    border: 1px solid #dee2e6;
-                    border-radius: 4px;
-                    padding: 5px 10px;
-                }
-                QPushButton:hover {
-                    background-color: #e9ecef;
-                }
-            """)
-            filter_buttons_layout.addWidget(button)
-        
-        # Control Buttons
+        # Start/Stop button
         self.start_button = QPushButton("Start Capture")
         self.start_button.clicked.connect(self.toggle_capture)
         self.start_button.setStyleSheet("""
@@ -181,32 +107,50 @@ class MainWindow(QMainWindow):
                 background-color: #218838;
             }
         """)
+        control_layout.addWidget(self.start_button)
         
-        # Add layouts to control panel
-        control_panel.addLayout(filter_buttons_layout)
-        control_panel.addWidget(self.start_button)
-        
-        layout.addLayout(control_panel)
-        
-        # Add Dashboard
-        layout.addWidget(self.dashboard)
-        
-        # Packet Table
-        self.packet_table = QTableWidget()
-        self.setup_packet_table()
-        self.packet_table.setStyleSheet("""
-            QTableWidget {
-                gridline-color: #dee2e6;
-                border: 1px solid #dee2e6;
+        # Download Sessions button
+        self.download_button = QPushButton("Download Sessions")
+        self.download_button.clicked.connect(self.download_sessions)
+        self.download_button.setStyleSheet("""
+            QPushButton {
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                padding: 8px 16px;
             }
-            QHeaderView::section {
-                background-color: #f8f9fa;
-                padding: 4px;
-                border: 1px solid #dee2e6;
-                font-weight: bold;
+            QPushButton:hover {
+                background-color: #0056b3;
             }
         """)
-        layout.addWidget(self.packet_table)
+        control_layout.addWidget(self.download_button)
+        
+        # Add control panel to main layout
+        main_layout.addWidget(control_panel)
+        
+        # Add dashboard
+        main_layout.addWidget(self.dashboard)
+        
+        # Create tab widget for packet list and other views
+        tab_widget = QTabWidget()
+        
+        # Packet list tab
+        packet_tab = QWidget()
+        packet_layout = QVBoxLayout(packet_tab)
+        
+        # Setup packet table
+        self.packet_table = QTableWidget()
+        self.setup_packet_table()
+        packet_layout.addWidget(self.packet_table)
+        
+        tab_widget.addTab(packet_tab, "Packets")
+        
+        # Add tab widget to main layout
+        main_layout.addWidget(tab_widget)
+        
+        # Create status bar
+        self.statusBar().showMessage("Ready")
     
     def setup_packet_table(self):
         """Setup the packet table with columns."""
@@ -436,4 +380,95 @@ class MainWindow(QMainWindow):
     def set_filter(self, filter_text):
         """Set the packet capture filter."""
         self.filter_input.setText(filter_text)
-        self.logger.info(f"Filter set to: {filter_text}") 
+        self.logger.info(f"Filter set to: {filter_text}")
+
+    def download_sessions(self):
+        """Handle session file downloads."""
+        try:
+            # Get list of session files
+            sessions_dir = 'sessions'
+            if not os.path.exists(sessions_dir):
+                QMessageBox.warning(self, "Warning", "No sessions directory found.")
+                return
+                
+            session_files = [f for f in os.listdir(sessions_dir) if f.endswith('.json')]
+            if not session_files:
+                QMessageBox.warning(self, "Warning", "No session files found.")
+                return
+            
+            # Create dialog for file selection
+            dialog = QDialog(self)
+            dialog.setWindowTitle("Select Sessions to Download")
+            dialog.setMinimumWidth(400)
+            layout = QVBoxLayout(dialog)
+            
+            # Create list widget for file selection
+            list_widget = QListWidget()
+            list_widget.setSelectionMode(QListWidget.SelectionMode.MultiSelection)
+            for file in session_files:
+                list_widget.addItem(file)
+            layout.addWidget(list_widget)
+            
+            # Add buttons
+            button_box = QHBoxLayout()
+            select_all = QPushButton("Select All")
+            select_all.clicked.connect(list_widget.selectAll)
+            button_box.addWidget(select_all)
+            
+            deselect_all = QPushButton("Deselect All")
+            deselect_all.clicked.connect(list_widget.clearSelection)
+            button_box.addWidget(deselect_all)
+            
+            download = QPushButton("Download Selected")
+            download.clicked.connect(dialog.accept)
+            button_box.addWidget(download)
+            
+            cancel = QPushButton("Cancel")
+            cancel.clicked.connect(dialog.reject)
+            button_box.addWidget(cancel)
+            
+            layout.addLayout(button_box)
+            
+            # Show dialog
+            if dialog.exec() == QDialog.DialogCode.Accepted:
+                selected_files = [item.text() for item in list_widget.selectedItems()]
+                if not selected_files:
+                    return
+                    
+                # Get download directory
+                download_dir = QFileDialog.getExistingDirectory(
+                    self,
+                    "Select Download Directory",
+                    os.path.expanduser("~/Downloads")
+                )
+                
+                if download_dir:
+                    for file in selected_files:
+                        src_path = os.path.join(sessions_dir, file)
+                        dst_path = os.path.join(download_dir, file)
+                        
+                        try:
+                            # Copy file
+                            shutil.copy2(src_path, dst_path)
+                            self.logger.info(f"Downloaded session file: {file}")
+                        except Exception as e:
+                            self.logger.error(f"Error downloading {file}: {e}")
+                            QMessageBox.warning(
+                                self,
+                                "Error",
+                                f"Failed to download {file}: {str(e)}"
+                            )
+                    
+                    QMessageBox.information(
+                        self,
+                        "Success",
+                        f"Successfully downloaded {len(selected_files)} session file(s)."
+                    )
+                    
+        except Exception as e:
+            self.logger.error(f"Error in download_sessions: {e}")
+            QMessageBox.critical(
+                self,
+                "Error",
+                f"An error occurred while downloading sessions: {str(e)}"
+            ) 
