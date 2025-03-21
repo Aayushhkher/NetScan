@@ -1,0 +1,287 @@
+{
+  "start_time": "2025-03-21T14:21:41.051454",
+  "end_time": "2025-03-21T14:21:45.885219",
+  "interface": "en0",
+  "packets": [
+    {
+      "time": "14:21:41",
+      "protocol": "0X740F",
+      "length": 56,
+      "info": "Ethernet II",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 56
+    },
+    {
+      "time": "14:21:41",
+      "protocol": "MDNS",
+      "length": 82,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.77.78",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 82
+    },
+    {
+      "time": "14:21:41",
+      "protocol": "MDNS",
+      "length": 102,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 102
+    },
+    {
+      "time": "14:21:41",
+      "protocol": "MDNS",
+      "length": 82,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.77.78",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 82
+    },
+    {
+      "time": "14:21:41",
+      "protocol": "MDNS",
+      "length": 102,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 102
+    },
+    {
+      "time": "14:21:41",
+      "protocol": "MDNS",
+      "length": 82,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.77.78",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 82
+    },
+    {
+      "time": "14:21:41",
+      "protocol": "MDNS",
+      "length": 102,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 102
+    },
+    {
+      "time": "14:21:41",
+      "protocol": "MDNS",
+      "length": 82,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.77.78",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 82
+    },
+    {
+      "time": "14:21:41",
+      "protocol": "MDNS",
+      "length": 102,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 102
+    },
+    {
+      "time": "14:21:41",
+      "protocol": "MDNS",
+      "length": 1289,
+      "info": "5353 Standard query 0x0000 PTR _daap._tcp.local\\  \"QM\" question PTR _touch-remote._tcp.local\\  \"QM\" question PTR _airplay._tcp.local\\  \"QM\" question PTR _raop._tcp.local\\  \"QM\" question PTR _afpovertcp._tcp.local\\  \"QM\" question PTR _smb._tcp.local\\  \"QM\" question PTR _rfb._tcp.local\\  \"QM\" question PTR _adisk._tcp.local\\  \"QM\" question PTR _apple-mobdev._tcp.local\\  \"QM\" question PTR 91e907e9._sub._apple-mobdev2._tcp.local\\  \"QM\" question PTR _apple-pairable._tcp.local\\  \"QM\" question PTR RBIHYD\u2019s MacBook Air._airplay._tcp.local PTR Aayush\u2019s MacBook Air._airplay._tcp.local PTR Nishant\u2019s MacBook Air._airplay._tcp.local PTR Sushmit\u2019s MacBook Air._airplay._tcp.local PTR Krishang\u2019s MacBook Air._airplay._tcp.local PTR praneeth's mac._airplay._tcp.local PTR vaishnavi\u2019s MacBook Air._airplay._tcp.local PTR Poulam\u2019s MacBook Air._airplay._tcp.local PTR Amit\u2019s MacBook Pro._airplay._tcp.local PTR HARDIK\u2019s MacBook Pro._airplay._tcp.local PTR EAA828A28194@RBIHYD\u2019s MacBook Air._raop._tcp.local PTR 4AF826D55935@Aayush\u2019s MacBook Air._raop._tcp.local PTR 760915ED9923@Nishant\u2019s MacBook Air._raop._tcp.local PTR BAC0F4FBC49A@Sushmit\u2019s MacBook Air._raop._tcp.local PTR D62E4B8CAC41@Krishang\u2019s MacBook Air._raop._tcp.local PTR 2E8707D002F3@praneeth's mac._raop._tcp.local PTR D0880C794F18@vaishnavi\u2019s MacBook Air._raop._tcp.local PTR A22A11AB79C6@Poulam\u2019s MacBook Air._raop._tcp.local PTR A078179B9DEC@Amit\u2019s MacBook Pro._raop._tcp.local PTR 5CE91E9093E8@HARDIK\u2019s MacBook Pro._raop._tcp.local PTR Nishant\u2019s MacBook Air._smb._tcp.local PTR Charanjeet\u2019s MacBook Pro._smb._tcp.local PTR Nishant\u2019s MacBook Air._rfb._tcp.local PTR Amit\u2019s MacBook Pro._rfb._tcp.local",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 1289
+    },
+    {
+      "time": "14:21:41",
+      "protocol": "MDNS",
+      "length": 1269,
+      "info": "5353 Standard query 0x0000 PTR _daap._tcp.local\\  \"QM\" question PTR _touch-remote._tcp.local\\  \"QM\" question PTR _airplay._tcp.local\\  \"QM\" question PTR _raop._tcp.local\\  \"QM\" question PTR _afpovertcp._tcp.local\\  \"QM\" question PTR _smb._tcp.local\\  \"QM\" question PTR _rfb._tcp.local\\  \"QM\" question PTR _adisk._tcp.local\\  \"QM\" question PTR _apple-mobdev._tcp.local\\  \"QM\" question PTR 91e907e9._sub._apple-mobdev2._tcp.local\\  \"QM\" question PTR _apple-pairable._tcp.local\\  \"QM\" question PTR RBIHYD\u2019s MacBook Air._airplay._tcp.local PTR Aayush\u2019s MacBook Air._airplay._tcp.local PTR Nishant\u2019s MacBook Air._airplay._tcp.local PTR Sushmit\u2019s MacBook Air._airplay._tcp.local PTR Krishang\u2019s MacBook Air._airplay._tcp.local PTR praneeth's mac._airplay._tcp.local PTR vaishnavi\u2019s MacBook Air._airplay._tcp.local PTR Poulam\u2019s MacBook Air._airplay._tcp.local PTR Amit\u2019s MacBook Pro._airplay._tcp.local PTR HARDIK\u2019s MacBook Pro._airplay._tcp.local PTR EAA828A28194@RBIHYD\u2019s MacBook Air._raop._tcp.local PTR 4AF826D55935@Aayush\u2019s MacBook Air._raop._tcp.local PTR 760915ED9923@Nishant\u2019s MacBook Air._raop._tcp.local PTR BAC0F4FBC49A@Sushmit\u2019s MacBook Air._raop._tcp.local PTR D62E4B8CAC41@Krishang\u2019s MacBook Air._raop._tcp.local PTR 2E8707D002F3@praneeth's mac._raop._tcp.local PTR D0880C794F18@vaishnavi\u2019s MacBook Air._raop._tcp.local PTR A22A11AB79C6@Poulam\u2019s MacBook Air._raop._tcp.local PTR A078179B9DEC@Amit\u2019s MacBook Pro._raop._tcp.local PTR 5CE91E9093E8@HARDIK\u2019s MacBook Pro._raop._tcp.local PTR Nishant\u2019s MacBook Air._smb._tcp.local PTR Charanjeet\u2019s MacBook Pro._smb._tcp.local PTR Nishant\u2019s MacBook Air._rfb._tcp.local PTR Amit\u2019s MacBook Pro._rfb._tcp.local",
+      "src": "10.56.77.90",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 1269
+    },
+    {
+      "time": "14:21:41",
+      "protocol": "UDP",
+      "length": 86,
+      "info": "57621 57621 \u2192 57621 Len=44",
+      "src": "10.56.76.80",
+      "dst": "10.56.255.255",
+      "flags": "",
+      "bytes": 86
+    },
+    {
+      "time": "14:21:41",
+      "protocol": "DHCP",
+      "length": 348,
+      "info": "67 DHCP Discover - Transaction ID 0xa7ced99f",
+      "src": "0.0.0.0",
+      "dst": "255.255.255.255",
+      "flags": "",
+      "bytes": 348
+    },
+    {
+      "time": "14:21:41",
+      "protocol": "MDNS",
+      "length": 75,
+      "info": "5353 Standard query 0x0000 PTR _ipp._tcp.local\\  \"QU\" question",
+      "src": "10.56.112.113",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 75
+    },
+    {
+      "time": "14:21:41",
+      "protocol": "MDNS",
+      "length": 95,
+      "info": "5353 Standard query 0x0000 PTR _ipp._tcp.local\\  \"QU\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 95
+    },
+    {
+      "time": "14:21:41",
+      "protocol": "MDNS",
+      "length": 76,
+      "info": "5353 Standard query 0x0000 PTR _ipps._tcp.local\\  \"QU\" question",
+      "src": "10.56.112.113",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 76
+    },
+    {
+      "time": "14:21:41",
+      "protocol": "MDNS",
+      "length": 96,
+      "info": "5353 Standard query 0x0000 PTR _ipps._tcp.local\\  \"QU\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 96
+    },
+    {
+      "time": "14:21:42",
+      "protocol": "BROWSER",
+      "length": 243,
+      "info": "138 Host Announcement JPL-BCA-DIVYAS\\  Workstation\\  Server\\  NT Workstation",
+      "src": "10.56.73.57",
+      "dst": "10.56.255.255",
+      "flags": "",
+      "bytes": 243
+    },
+    {
+      "time": "14:21:42",
+      "protocol": "MDNS",
+      "length": 87,
+      "info": "5353 Standard query 0x0000 PTR _spotify-connect._tcp.local\\  \"QM\" question",
+      "src": "10.56.77.38",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 87
+    },
+    {
+      "time": "14:21:42",
+      "protocol": "MDNS",
+      "length": 107,
+      "info": "5353 Standard query 0x0000 PTR _spotify-connect._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 107
+    },
+    {
+      "time": "14:21:42",
+      "protocol": "0X743F",
+      "length": 56,
+      "info": "Ethernet II",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 56
+    },
+    {
+      "time": "14:21:42",
+      "protocol": "MDNS",
+      "length": 103,
+      "info": "5353 Standard query 0x0007 PTR _CA5E8412._sub._googlecast._tcp.local\\  \"QM\" question PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.75.186",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 103
+    },
+    {
+      "time": "14:21:42",
+      "protocol": "MDNS",
+      "length": 123,
+      "info": "5353 Standard query 0x0007 PTR _CA5E8412._sub._googlecast._tcp.local\\  \"QM\" question PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 123
+    },
+    {
+      "time": "14:21:43",
+      "protocol": "DHCP",
+      "length": 342,
+      "info": "67 DHCP Discover - Transaction ID 0x863fe810",
+      "src": "0.0.0.0",
+      "dst": "255.255.255.255",
+      "flags": "",
+      "bytes": 342
+    },
+    {
+      "time": "14:21:43",
+      "protocol": "MDNS",
+      "length": 103,
+      "info": "5353 Standard query 0x0008 PTR _CA5E8412._sub._googlecast._tcp.local\\  \"QM\" question PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.75.186",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 103
+    },
+    {
+      "time": "14:21:43",
+      "protocol": "MDNS",
+      "length": 123,
+      "info": "5353 Standard query 0x0008 PTR _CA5E8412._sub._googlecast._tcp.local\\  \"QM\" question PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 123
+    },
+    {
+      "time": "14:21:44",
+      "protocol": "MDNS",
+      "length": 103,
+      "info": "5353 Standard query 0x0009 PTR _CA5E8412._sub._googlecast._tcp.local\\  \"QM\" question PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.75.186",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 103
+    },
+    {
+      "time": "14:21:44",
+      "protocol": "MDNS",
+      "length": 123,
+      "info": "5353 Standard query 0x0009 PTR _CA5E8412._sub._googlecast._tcp.local\\  \"QM\" question PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 123
+    }
+  ]
+}

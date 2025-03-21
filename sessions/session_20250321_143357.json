@@ -1,0 +1,25 @@
+{
+  "start_time": "2025-03-21T14:33:57.960273",
+  "end_time": "2025-03-21T14:34:14.660166",
+  "interface": "en0",
+  "packets": [
+    {
+      "number": 1,
+      "time": "21\\",
+      "protocol": "52.20.37.252",
+      "length": 0,
+      "info": "78",
+      "src": " 2025 14:34:05.908028000 IST",
+      "dst": "10.56.75.254",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: 52.20.37.252"
+        ],
+        "risk_level": "medium"
+      }
+    }
+  ]
+}

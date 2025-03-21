@@ -6,7 +6,7 @@ from PyQt6.QtWidgets import QApplication
 from traffic_analyzer.src.gui.main_window import MainWindow
 
 def main():
-    """Main entry point for the traffic analyzer application."""
+    """Main entry point for the NetScan application."""
     parser = argparse.ArgumentParser(description='Traffic Analyzer')
     parser.add_argument('--interface', help='Network interface to capture from')
     parser.add_argument('--filter', help='BPF filter for packet capture')

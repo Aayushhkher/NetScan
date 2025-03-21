@@ -18,7 +18,7 @@ def main():
     logger = logging.getLogger(__name__)
     
     try:
-        parser = argparse.ArgumentParser(description='Traffic Analyzer')
+        parser = argparse.ArgumentParser(description='NetScan - Advanced Network Traffic Analysis Tool')
         parser.add_argument('--interface', help='Network interface to capture from')
         parser.add_argument('--filter', help='BPF filter for packet capture')
         parser.add_argument('--gui', action='store_true', help='Run in GUI mode')

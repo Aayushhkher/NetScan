@@ -19,7 +19,7 @@ import time
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Network Traffic Analyzer")
+        self.setWindowTitle("NetScan - Network Traffic Analyzer")
         self.setMinimumSize(1200, 800)
         
         # Configure logging
@@ -193,11 +193,7 @@ class MainWindow(QMainWindow):
         
         # Packet Table
         self.packet_table = QTableWidget()
-        self.packet_table.setColumnCount(7)
-        self.packet_table.setHorizontalHeaderLabels([
-            "Time", "Protocol", "Source", "Destination",
-            "Length", "Info", "Flags"
-        ])
+        self.setup_packet_table()
         self.packet_table.setStyleSheet("""
             QTableWidget {
                 gridline-color: #dee2e6;
@@ -211,6 +207,24 @@ class MainWindow(QMainWindow):
             }
         """)
         layout.addWidget(self.packet_table)
+    
+    def setup_packet_table(self):
+        """Setup the packet table with columns."""
+        self.packet_table.setColumnCount(8)
+        self.packet_table.setHorizontalHeaderLabels([
+            'Time', 'Protocol', 'Length', 'Source', 'Destination', 'Info', 'Safety', 'Warnings'
+        ])
+        self.packet_table.horizontalHeader().setStretchLastSection(True)
+        
+        # Set column widths
+        self.packet_table.setColumnWidth(0, 100)  # Time
+        self.packet_table.setColumnWidth(1, 100)  # Protocol
+        self.packet_table.setColumnWidth(2, 80)   # Length
+        self.packet_table.setColumnWidth(3, 150)  # Source
+        self.packet_table.setColumnWidth(4, 150)  # Destination
+        self.packet_table.setColumnWidth(5, 300)  # Info
+        self.packet_table.setColumnWidth(6, 80)   # Safety
+        self.packet_table.setColumnWidth(7, 200)  # Warnings
     
     def refresh_interfaces(self):
         """Refresh the list of available network interfaces."""
@@ -232,42 +246,38 @@ class MainWindow(QMainWindow):
             QMessageBox.warning(self, "Warning", "No network interfaces found. Please check your network configuration.")
     
     def toggle_capture(self):
-        """Toggle packet capture."""
-        try:
-            if not self.packet_sniffer.is_capturing:
-                # Start capture
-                interface = self.interface_combo.currentText()
-                if not interface:
-                    QMessageBox.warning(self, "Warning", "Please select a network interface")
-                    return
-                
-                filter_text = self.filter_input.text().strip()
-                if self.packet_sniffer.start_capture(interface, filter_text):
-                    self.start_button.setText("Stop Capture")
-                    self.start_button.setStyleSheet("""
-                        QPushButton {
-                            background-color: #ff4444;
-                            color: white;
-                            border: none;
-                            border-radius: 4px;
-                            padding: 8px 16px;
-                        }
-                        QPushButton:hover {
-                            background-color: #c82333;
-                        }
-                    """)
-                    self.stats['start_time'] = time.time()
-                    self.stats['packet_count'] = 0
-                    self.stats['data_transferred'] = 0
-                    self.stats['protocol_stats'] = {}
-                    self.stats['active_connections'] = set()
-                    self.packet_table.setRowCount(0)
-                    self.packet_list = []
-                    self.logger.info("Started packet capture")
-                else:
-                    QMessageBox.critical(self, "Error", "Failed to start packet capture")
-            else:
-                # Stop capture
+        """Toggle packet capture on/off."""
+        if not self.packet_sniffer.is_capturing:
+            interface = self.interface_combo.currentText()
+            filter_text = self.filter_input.text()
+            
+            try:
+                self.packet_sniffer.start_capture(interface, filter_text)
+                self.start_button.setText("Stop Capture")
+                self.start_button.setStyleSheet("""
+                    QPushButton {
+                        background-color: #ff4444;
+                        color: white;
+                        border: none;
+                        border-radius: 4px;
+                        padding: 8px 16px;
+                    }
+                    QPushButton:hover {
+                        background-color: #c82333;
+                    }
+                """)
+                self.stats['start_time'] = time.time()
+                self.stats['packet_count'] = 0
+                self.stats['data_transferred'] = 0
+                self.stats['protocol_stats'] = {}
+                self.stats['active_connections'] = set()
+                self.packet_list = []
+                self.logger.info("Started packet capture")
+            except Exception as e:
+                self.logger.error(f"Error toggling capture: {str(e)}")
+                QMessageBox.critical(self, "Error", str(e))
+        else:
+            try:
                 self.packet_sniffer.stop_capture()
                 self.start_button.setText("Start Capture")
                 self.start_button.setStyleSheet("""
@@ -283,51 +293,67 @@ class MainWindow(QMainWindow):
                     }
                 """)
                 self.logger.info("Stopped packet capture")
-                
-        except Exception as e:
-            self.logger.error(f"Error toggling capture: {str(e)}")
-            QMessageBox.critical(self, "Error", f"Error toggling capture: {str(e)}")
+                session_file = self.packet_sniffer.session_file
+                if session_file:
+                    self.logger.info(f"Session saved to: {session_file}")
+                else:
+                    self.logger.info("Capture stopped.")
+            except Exception as e:
+                self.logger.error(f"Error toggling capture: {str(e)}")
+                QMessageBox.critical(self, "Error", str(e))
     
     def process_packet(self, packet_info):
-        """Process captured packet and update UI."""
+        """Process a captured packet and update the UI."""
         try:
-            # Add packet to list (keep only last 1000)
-            self.packet_list.append(packet_info)
-            if len(self.packet_list) > 1000:
-                self.packet_list = self.packet_list[-1000:]
+            packet_data = packet_info['data']
+            safety_info = packet_info.get('safety', {})
+            
+            # Update statistics
+            self.stats['packet_count'] += 1
+            self.stats['data_transferred'] += packet_data.get('bytes', 0)
+            
+            # Update protocol statistics
+            protocol = packet_data.get('protocol', 'Unknown')
+            if protocol not in self.stats['protocol_stats']:
+                self.stats['protocol_stats'][protocol] = 0
+            self.stats['protocol_stats'][protocol] += 1
+            
+            # Add to packet list
+            self.packet_list.append(packet_data)
             
             # Update packet table
             row = self.packet_table.rowCount()
             self.packet_table.insertRow(row)
-            self.packet_table.setItem(row, 0, QTableWidgetItem(packet_info['time']))
-            self.packet_table.setItem(row, 1, QTableWidgetItem(packet_info['protocol']))
-            self.packet_table.setItem(row, 2, QTableWidgetItem(packet_info['src']))
-            self.packet_table.setItem(row, 3, QTableWidgetItem(packet_info['dst']))
-            self.packet_table.setItem(row, 4, QTableWidgetItem(str(packet_info['length'])))
-            self.packet_table.setItem(row, 5, QTableWidgetItem(packet_info['info']))
-            self.packet_table.setItem(row, 6, QTableWidgetItem(packet_info['flags']))
             
-            # Keep only last 1000 rows in table
-            while self.packet_table.rowCount() > 1000:
-                self.packet_table.removeRow(0)
+            # Set cell values
+            self.packet_table.setItem(row, 0, QTableWidgetItem(packet_data.get('time', '')))
+            self.packet_table.setItem(row, 1, QTableWidgetItem(protocol))
+            self.packet_table.setItem(row, 2, QTableWidgetItem(str(packet_data.get('length', 0))))
+            self.packet_table.setItem(row, 3, QTableWidgetItem(packet_data.get('src', 'Unknown')))
+            self.packet_table.setItem(row, 4, QTableWidgetItem(packet_data.get('dst', 'Unknown')))
+            self.packet_table.setItem(row, 5, QTableWidgetItem(packet_data.get('info', '')))
             
-            # Update statistics
-            self.stats['packet_count'] += 1
-            self.stats['data_transferred'] += packet_info['length']
-            self.stats['protocol_stats'][packet_info['protocol']] = self.stats['protocol_stats'].get(packet_info['protocol'], 0) + 1
+            # Set safety status
+            safety_item = QTableWidgetItem('Safe' if safety_info.get('is_safe', True) else '⚠️ Unsafe')
+            safety_item.setForeground(Qt.GlobalColor.green if safety_info.get('is_safe', True) else Qt.GlobalColor.red)
+            self.packet_table.setItem(row, 6, safety_item)
             
-            # Update active connections
-            conn_key = f"{packet_info['src']}-{packet_info['dst']}"
-            self.stats['active_connections'].add(conn_key)
+            # Set warnings
+            warnings = safety_info.get('warnings', [])
+            warnings_text = '\n'.join(warnings) if warnings else ''
+            warnings_item = QTableWidgetItem(warnings_text)
+            if warnings:
+                warnings_item.setForeground(Qt.GlobalColor.red)
+            self.packet_table.setItem(row, 7, warnings_item)
             
-            # Scroll to bottom
+            # Scroll to the bottom
             self.packet_table.scrollToBottom()
             
-            # Update dashboard immediately
-            self.update_dashboard()
+            # Update dashboard
+            self.dashboard.update_stats(self.stats)
             
         except Exception as e:
-            self.logger.error(f"Error processing packet: {str(e)}")
+            self.logger.error(f"Error processing packet: {e}")
     
     def update_dashboard(self):
         """Update the dashboard with current statistics."""
@@ -341,9 +367,9 @@ class MainWindow(QMainWindow):
             self.dashboard.update_stat_cards(self.stats)
             self.dashboard.update_protocol_chart(self.stats['protocol_stats'])
             
-            # Update timeline with new packets
+            # Update timeline with new packets (show last 50 packets for smoother updates)
             if self.packet_list:
-                self.dashboard.update_timeline_chart(self.packet_list[-100:])  # Show last 100 packets
+                self.dashboard.update_timeline_chart(self.packet_list[-50:])
             
             # Update tables
             connections = [
@@ -366,6 +392,9 @@ class MainWindow(QMainWindow):
                 self.dashboard.capture_time.setText(
                     f"Capture Time: {hours:02d}:{minutes:02d}:{seconds:02d}"
                 )
+            
+            # Force update
+            self.dashboard.update()
             
         except Exception as e:
             self.logger.error(f"Error updating dashboard: {str(e)}")

@@ -251,23 +251,59 @@ class DashboardWidget(QWidget):
                 self.timeline_ax.text(0.5, 0.5, 'No data', ha='center', va='center')
             else:
                 # Prepare data
-                times = [p['time'] for p in packet_data]
-                bytes_transferred = [p['bytes'] for p in packet_data]
+                times = []
+                bytes_transferred = []
+                total_bytes = 0
+                
+                for p in packet_data:
+                    try:
+                        # Convert time string to datetime
+                        time_str = p.get('time', '00:00:00')
+                        bytes_val = p.get('length', 0)
+                        
+                        # Add to running total
+                        total_bytes += bytes_val
+                        
+                        times.append(time_str)
+                        bytes_transferred.append(total_bytes)
+                    except Exception as e:
+                        logging.error(f"Error processing packet for timeline: {e}")
+                        continue
                 
                 # Create line plot
-                self.timeline_ax.plot(times, bytes_transferred, '-o')
-                self.timeline_ax.set_title('Network Activity Timeline')
-                self.timeline_ax.set_xlabel('Time')
-                self.timeline_ax.set_ylabel('Bytes Transferred')
-                self.timeline_ax.grid(True)
-                
-                # Rotate x-axis labels for better readability
-                plt.setp(self.timeline_ax.get_xticklabels(), rotation=45)
+                if times and bytes_transferred:
+                    # Plot with a blue line and markers
+                    self.timeline_ax.plot(range(len(times)), bytes_transferred, '-b', linewidth=2, marker='o', markersize=4)
+                    
+                    # Set x-axis labels
+                    num_ticks = min(5, len(times))
+                    if num_ticks > 0:
+                        tick_positions = np.linspace(0, len(times) - 1, num_ticks, dtype=int)
+                        self.timeline_ax.set_xticks(tick_positions)
+                        self.timeline_ax.set_xticklabels([times[i] for i in tick_positions], rotation=45)
+                    
+                    # Add labels and grid
+                    self.timeline_ax.set_title('Network Activity Timeline')
+                    self.timeline_ax.set_xlabel('Time')
+                    self.timeline_ax.set_ylabel('Total Bytes Transferred')
+                    self.timeline_ax.grid(True, linestyle='--', alpha=0.7)
+                    
+                    # Format y-axis to show bytes in human-readable format
+                    self.timeline_ax.yaxis.set_major_formatter(
+                        plt.FuncFormatter(lambda x, p: self.format_size(x))
+                    )
+                    
+                    # Auto-scale the y-axis with some padding
+                    y_min, y_max = self.timeline_ax.get_ylim()
+                    padding = (y_max - y_min) * 0.1
+                    self.timeline_ax.set_ylim(y_min - padding, y_max + padding)
             
+            # Adjust layout and draw
             self.timeline_fig.tight_layout()
             self.timeline_canvas.draw()
+            
         except Exception as e:
-            logging.error(f"Error updating timeline chart: {str(e)}")
+            logging.error(f"Error updating timeline chart: {e}")
     
     def update_tables(self, protocol_stats, connections):
         """Update the protocol and connections tables"""

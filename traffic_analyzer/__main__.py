@@ -13,7 +13,7 @@ from PyQt6.QtWidgets import QApplication
 @click.option('--filter', '-f', help='BPF filter to apply')
 @click.option('--gui/--no-gui', default=True, help='Run with GUI (default: True)')
 def main(interface, filter, gui):
-    """Traffic Analyzer - Network packet capture and analysis tool."""
+    """NetScan - Advanced Network Traffic Analysis Tool"""
     if gui:
         app = QApplication(sys.argv)
         window = MainWindow()

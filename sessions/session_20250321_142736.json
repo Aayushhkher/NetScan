@@ -1,0 +1,1933 @@
+{
+  "start_time": "2025-03-21T14:27:36.296661",
+  "end_time": "2025-03-21T14:27:58.263476",
+  "interface": "en0",
+  "packets": [
+    {
+      "number": 2,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:37.162858000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 3,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:37.884185000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 5,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:37.885980000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 6,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:37.990767000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 8,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:38.189486000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 9,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:38.409420000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 10,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:38.409423000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 13,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:38.412908000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 14,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:38.412912000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 19,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:39.007323000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 20,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:39.008098000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 23,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:39.009986000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 25,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:39.416691000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 26,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:39.416694000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 27,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:39.418244000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 32,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:39.421523000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 33,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:39.421824000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 34,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:39.422886000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 36,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:39.427663000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 40,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:39.624278000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 42,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:39.626151000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 43,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:39.712385000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 48,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:39.739467000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 50,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:40.138581000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 52,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:40.142572000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 54,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:40.446118000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 56,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:40.545675000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 58,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:40.549092000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 60,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:40.747417000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 61,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:41.164121000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 64,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:41.386058000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 65,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:41.464127000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 66,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:41.466992000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 69,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:41.668770000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 71,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:41.875496000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 72,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:42.279084000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 75,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:42.381083000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 78,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:42.591493000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 79,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:42.798749000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 82,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:42.925563000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 83,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:43.144371000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 85,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:43.318108000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 86,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:43.318141000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 87,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:43.365077000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 89,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:43.414054000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 91,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:43.542442000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 93,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:43.543839000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 95,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:43.610631000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 97,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:43.717069000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 99,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:43.819826000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 100,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:44.326339000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 102,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:44.327644000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 103,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:44.532272000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 106,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:46.272954000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 109,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:46.305129000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 111,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:46.410039000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 112,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:46.410042000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 115,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:46.412563000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 117,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:46.413866000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 119,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:46.791499000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 121,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:47.519959000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 123,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:47.609005000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 125,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:47.859367000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 126,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:47.931069000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 127,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:47.936686000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 128,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.021522000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 129,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.021524000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 130,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.022805000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 131,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.022807000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 133,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.024605000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 134,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.127002000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 135,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.214632000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 136,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.222758000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 137,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.223003000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 140,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.438983000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 141,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.439234000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 143,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.440819000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 147,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.530646000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 149,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.534314000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 151,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.632719000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 152,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.633118000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 155,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.837538000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 157,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.944090000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 158,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.946730000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 160,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.948535000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 164,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.951251000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 165,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.953025000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 166,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:48.953027000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 168,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:49.657730000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 169,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:49.758705000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 172,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:50.065974000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 174,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:50.066613000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 175,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:50.680445000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 176,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:50.680449000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 179,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:50.880189000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 181,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:51.192565000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 183,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:51.412786000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 185,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:51.414017000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 187,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:51.415162000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 189,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:51.622616000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 191,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:51.704777000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 193,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:51.777756000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 196,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:52.218435000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 197,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:52.423990000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 198,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:52.438797000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 201,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:52.607612000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    },
+    {
+      "number": 208,
+      "time": "21\\",
+      "protocol": "Protocol 0",
+      "length": 0,
+      "info": "",
+      "src": " 2025 14:27:52.738066000 IST",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 0,
+      "safety": {
+        "is_safe": false,
+        "warnings": [
+          "Uncommon protocol detected: Protocol 0"
+        ],
+        "risk_level": "medium"
+      }
+    }
+  ]
+}

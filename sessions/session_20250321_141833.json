@@ -1,0 +1,2037 @@
+{
+  "start_time": "2025-03-21T14:18:33.484736",
+  "end_time": "2025-03-21T14:18:40.060686",
+  "interface": "en0",
+  "packets": [
+    {
+      "time": "14:18:33",
+      "protocol": "NBNS",
+      "length": 92,
+      "info": "137 Name query NB WPAD<00>",
+      "src": "10.56.102.228",
+      "dst": "10.56.255.255",
+      "flags": "",
+      "bytes": 92
+    },
+    {
+      "time": "14:18:33",
+      "protocol": "NBNS",
+      "length": 92,
+      "info": "137 Name query NB WPAD<00>",
+      "src": "10.56.102.228",
+      "dst": "10.56.255.255",
+      "flags": "",
+      "bytes": 92
+    },
+    {
+      "time": "14:18:33",
+      "protocol": "NBNS",
+      "length": 92,
+      "info": "137 Name query NB LAPTOP-U0KMLPBC<1c>",
+      "src": "10.56.76.102",
+      "dst": "10.56.255.255",
+      "flags": "",
+      "bytes": 92
+    },
+    {
+      "time": "14:18:33",
+      "protocol": "MDNS",
+      "length": 119,
+      "info": "5353 Standard query 0x0002 PTR _CC1AD845._sub._googlecast._tcp.local\\  \"QM\" question PTR _CC32E753._sub._googlecast._tcp.local\\  \"QM\" question PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.76.226",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 119
+    },
+    {
+      "time": "14:18:33",
+      "protocol": "MDNS",
+      "length": 139,
+      "info": "5353 Standard query 0x0002 PTR _CC1AD845._sub._googlecast._tcp.local\\  \"QM\" question PTR _CC32E753._sub._googlecast._tcp.local\\  \"QM\" question PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 139
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "MDNS",
+      "length": 82,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.102.228",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 82
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "MDNS",
+      "length": 102,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 102
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "MDNS",
+      "length": 82,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.102.228",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 82
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "MDNS",
+      "length": 102,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 102
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "MDNS",
+      "length": 276,
+      "info": "5353 Standard query response 0x0000 PTR LAPTOP-RULTOFUG._dosvc._tcp.local SRV 0 0 7680 LAPTOP-RULTOFUG.local TXT",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 276
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "MDNS",
+      "length": 113,
+      "info": "5353 Standard query 0x0000 ANY LAPTOP-RULTOFUG._dosvc._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 113
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "MDNS",
+      "length": 256,
+      "info": "5353 Standard query response 0x0000 PTR LAPTOP-RULTOFUG._dosvc._tcp.local SRV 0 0 7680 LAPTOP-RULTOFUG.local TXT",
+      "src": "10.56.76.126",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 256
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "MDNS",
+      "length": 93,
+      "info": "5353 Standard query 0xa93e PTR LAPTOP-RULTOFUG._dosvc._tcp.local\\  \"QM\" question",
+      "src": "10.56.76.125",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 93
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "TLSV1.2",
+      "length": 410,
+      "info": "Application Data",
+      "src": "10.56.75.254",
+      "dst": "8.8.8.8",
+      "flags": "0x0018",
+      "bytes": 410
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "NBNS",
+      "length": 92,
+      "info": "137 Name query NB LAPTOP-U0KMLPBC<1c>",
+      "src": "10.56.76.102",
+      "dst": "10.56.255.255",
+      "flags": "",
+      "bytes": 92
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "TCP",
+      "length": 66,
+      "info": "443 \u2192 58621 [ACK] Seq=1 Ack=345 Win=1037 Len=0 TSval=2365136824 TSecr=1237064399",
+      "src": "8.8.8.8",
+      "dst": "10.56.75.254",
+      "flags": "0x0010",
+      "bytes": 66
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "TLSV1.2",
+      "length": 171,
+      "info": "Application Data",
+      "src": "8.8.8.8",
+      "dst": "10.56.75.254",
+      "flags": "0x0018",
+      "bytes": 171
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "TLSV1.2",
+      "length": 565,
+      "info": "Application Data",
+      "src": "8.8.8.8",
+      "dst": "10.56.75.254",
+      "flags": "0x0018",
+      "bytes": 565
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "TLSV1.2",
+      "length": 97,
+      "info": "Application Data",
+      "src": "8.8.8.8",
+      "dst": "10.56.75.254",
+      "flags": "0x0018",
+      "bytes": 97
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "TLSV1.2",
+      "length": 166,
+      "info": "Application Data",
+      "src": "8.8.8.8",
+      "dst": "10.56.75.254",
+      "flags": "0x0018",
+      "bytes": 166
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "TLSV1.2",
+      "length": 565,
+      "info": "Application Data",
+      "src": "8.8.8.8",
+      "dst": "10.56.75.254",
+      "flags": "0x0018",
+      "bytes": 565
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "TLSV1.2",
+      "length": 97,
+      "info": "Application Data",
+      "src": "8.8.8.8",
+      "dst": "10.56.75.254",
+      "flags": "0x0018",
+      "bytes": 97
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "TCP",
+      "length": 66,
+      "info": "58621 \u2192 443 [ACK] Seq=345 Ack=1266 Win=2028 Len=0 TSval=1237064440 TSecr=2365136828",
+      "src": "10.56.75.254",
+      "dst": "8.8.8.8",
+      "flags": "0x0010",
+      "bytes": 66
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "TLSV1.2",
+      "length": 105,
+      "info": "Application Data",
+      "src": "10.56.75.254",
+      "dst": "8.8.8.8",
+      "flags": "0x0018",
+      "bytes": 105
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "TCP",
+      "length": 78,
+      "info": "58691 \u2192 443 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=64 TSval=1094196224 TSecr=0 SACK_PERM",
+      "src": "10.56.75.254",
+      "dst": "35.153.219.14",
+      "flags": "0x0002",
+      "bytes": 78
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "TCP",
+      "length": 66,
+      "info": "443 \u2192 58621 [ACK] Seq=1266 Ack=384 Win=1037 Len=0 TSval=2365136867 TSecr=1237064440",
+      "src": "8.8.8.8",
+      "dst": "10.56.75.254",
+      "flags": "0x0010",
+      "bytes": 66
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "MDNS",
+      "length": 93,
+      "info": "5353 Standard query 0x0000 ANY LAPTOP-RULTOFUG._dosvc._tcp.local\\  \"QM\" question",
+      "src": "10.56.76.126",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 93
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "MDNS",
+      "length": 113,
+      "info": "5353 Standard query 0x0000 ANY LAPTOP-RULTOFUG._dosvc._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 113
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "MDNS",
+      "length": 93,
+      "info": "5353 Standard query 0x0000 ANY LAPTOP-RULTOFUG._dosvc._tcp.local\\  \"QM\" question",
+      "src": "10.56.76.126",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 93
+    },
+    {
+      "time": "14:18:34",
+      "protocol": "MDNS",
+      "length": 113,
+      "info": "5353 Standard query 0x0000 ANY LAPTOP-RULTOFUG._dosvc._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 113
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "MDNS",
+      "length": 119,
+      "info": "5353 Standard query 0x0003 PTR _CC1AD845._sub._googlecast._tcp.local\\  \"QM\" question PTR _CC32E753._sub._googlecast._tcp.local\\  \"QM\" question PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.76.226",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 119
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "MDNS",
+      "length": 96,
+      "info": "5353 Standard query 0x0000 PTR _spotify-social-listening._tcp.local\\  \"QM\" question",
+      "src": "10.56.76.226",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 96
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "MDNS",
+      "length": 139,
+      "info": "5353 Standard query 0x0003 PTR _CC1AD845._sub._googlecast._tcp.local\\  \"QM\" question PTR _CC32E753._sub._googlecast._tcp.local\\  \"QM\" question PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 139
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "MDNS",
+      "length": 116,
+      "info": "5353 Standard query 0x0000 PTR _spotify-social-listening._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 116
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "TCP",
+      "length": 74,
+      "info": "443 \u2192 58691 [SYN\\  ACK] Seq=0 Ack=1 Win=26847 Len=0 MSS=1460 SACK_PERM TSval=1174109011 TSecr=1094196224 WS=256",
+      "src": "35.153.219.14",
+      "dst": "10.56.75.254",
+      "flags": "0x0012",
+      "bytes": 74
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "TCP",
+      "length": 66,
+      "info": "58691 \u2192 443 [ACK] Seq=1 Ack=1 Win=131712 Len=0 TSval=1094196639 TSecr=1174109011",
+      "src": "10.56.75.254",
+      "dst": "35.153.219.14",
+      "flags": "0x0010",
+      "bytes": 66
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "TLSV1",
+      "length": 583,
+      "info": "Client Hello (SNI=api2.cursor.sh)",
+      "src": "10.56.75.254",
+      "dst": "35.153.219.14",
+      "flags": "0x0018",
+      "bytes": 583
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "MDNS",
+      "length": 321,
+      "info": "5353 Standard query response 0x0000 PTR\\  cache flush LAPTOP-RULTOFUG._dosvc._tcp.local SRV\\  cache flush 0 0 7680 LAPTOP-RULTOFUG.local TXT\\  cache flush A\\  cache flush 10.56.76.126 AAAA\\  cache flush fe80::6093:70b:7e21:ccd9",
+      "src": "10.56.76.126",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 321
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "MDNS",
+      "length": 341,
+      "info": "5353 Standard query response 0x0000 PTR\\  cache flush LAPTOP-RULTOFUG._dosvc._tcp.local SRV\\  cache flush 0 0 7680 LAPTOP-RULTOFUG.local TXT\\  cache flush A\\  cache flush 10.56.76.126 AAAA\\  cache flush fe80::6093:70b:7e21:ccd9",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 341
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "MDNS",
+      "length": 257,
+      "info": "5353 Standard query response 0x0000 SRV\\  cache flush 0 0 7680 LAPTOP-RULTOFUG.local TXT\\  cache flush A\\  cache flush 10.56.76.126 AAAA\\  cache flush fe80::6093:70b:7e21:ccd9",
+      "src": "10.56.76.126",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 257
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "MDNS",
+      "length": 277,
+      "info": "5353 Standard query response 0x0000 SRV\\  cache flush 0 0 7680 LAPTOP-RULTOFUG.local TXT\\  cache flush A\\  cache flush 10.56.76.126 AAAA\\  cache flush fe80::6093:70b:7e21:ccd9",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 277
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "MDNS",
+      "length": 82,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.102.228",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 82
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "MDNS",
+      "length": 102,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 102
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "MDNS",
+      "length": 82,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.102.228",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 82
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "MDNS",
+      "length": 102,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 102
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "MDNS",
+      "length": 120,
+      "info": "5353 Standard query 0x0000 PTR _companion-link._tcp.local\\  \"QU\" question PTR _rdlink._tcp.local\\  \"QU\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 120
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "MDNS",
+      "length": 249,
+      "info": "5353 Standard query response 0x0000 PTR\\  cache flush Yashs-iPhone.local PTR\\  cache flush Yashs-iPhone.local NSEC\\  cache flush F.2.A.5.3.D.1.9.F.7.5.6.3.A.8.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.E.F.ip6.arpa NSEC\\  cache flush 152.76.56.10.in-addr.arpa",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 249
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "MDNS",
+      "length": 100,
+      "info": "5353 Standard query 0x0000 PTR _companion-link._tcp.local\\  \"QU\" question PTR _rdlink._tcp.local\\  \"QU\" question",
+      "src": "10.56.76.152",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 100
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "TCP",
+      "length": 66,
+      "info": "443 \u2192 58691 [ACK] Seq=1 Ack=518 Win=28160 Len=0 TSval=1174109414 TSecr=1094196639",
+      "src": "35.153.219.14",
+      "dst": "10.56.75.254",
+      "flags": "0x0010",
+      "bytes": 66
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "TLSV1.3",
+      "length": 1514,
+      "info": "Server Hello\\  Change Cipher Spec\\  Application Data",
+      "src": "35.153.219.14",
+      "dst": "10.56.75.254",
+      "flags": "0x0010",
+      "bytes": 1514
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "TCP",
+      "length": 1514,
+      "info": "443 \u2192 58691 [ACK] Seq=1449 Ack=518 Win=28160 Len=1448 TSval=1174109414 TSecr=1094196639",
+      "src": "35.153.219.14",
+      "dst": "10.56.75.254",
+      "flags": "0x0010",
+      "bytes": 1514
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "TLSV1.3",
+      "length": 1514,
+      "info": "Application Data\\  Application Data",
+      "src": "35.153.219.14",
+      "dst": "10.56.75.254",
+      "flags": "0x0010",
+      "bytes": 1514
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "TLSV1.3",
+      "length": 120,
+      "info": "Application Data",
+      "src": "35.153.219.14",
+      "dst": "10.56.75.254",
+      "flags": "0x0018",
+      "bytes": 120
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "TCP",
+      "length": 66,
+      "info": "58691 \u2192 443 [ACK] Seq=518 Ack=4399 Win=131072 Len=0 TSval=1094196933 TSecr=1174109415",
+      "src": "10.56.75.254",
+      "dst": "35.153.219.14",
+      "flags": "0x0010",
+      "bytes": 66
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "TLSV1.3",
+      "length": 130,
+      "info": "Change Cipher Spec\\  Application Data",
+      "src": "10.56.75.254",
+      "dst": "35.153.219.14",
+      "flags": "0x0018",
+      "bytes": 130
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "TLSV1.3",
+      "length": 432,
+      "info": "Application Data",
+      "src": "10.56.75.254",
+      "dst": "35.153.219.14",
+      "flags": "0x0018",
+      "bytes": 432
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "NBNS",
+      "length": 92,
+      "info": "137 Name query NB LAPTOP-U0KMLPBC<1c>",
+      "src": "10.56.76.102",
+      "dst": "10.56.255.255",
+      "flags": "",
+      "bytes": 92
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "ARP",
+      "length": 42,
+      "info": "Who has 10.56.76.152? Tell 10.56.75.254",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 42
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "MDNS",
+      "length": 390,
+      "info": "5353 Standard query response 0x0000 PTR Aayush\u2019s MacBook Air._companion-link._tcp.local SRV\\  cache flush 0 0 64176 Aayushs-MacBook-Air-2.local TXT\\  cache flush TXT AAAA\\  cache flush fe80::1814:37bd:b83b:43b7 A\\  cache flush 10.56.75.254",
+      "src": "10.56.75.254",
+      "dst": "10.56.76.152",
+      "flags": "",
+      "bytes": 390
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "ARP",
+      "length": 56,
+      "info": "10.56.76.152 is at 62:16:68:0d:a8:50",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 56
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "TCP",
+      "length": 66,
+      "info": "443 \u2192 58691 [ACK] Seq=4399 Ack=582 Win=28160 Len=0 TSval=1174109709 TSecr=1094196937",
+      "src": "35.153.219.14",
+      "dst": "10.56.75.254",
+      "flags": "0x0010",
+      "bytes": 66
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "TLSV1.3",
+      "length": 245,
+      "info": "Application Data",
+      "src": "35.153.219.14",
+      "dst": "10.56.75.254",
+      "flags": "0x0018",
+      "bytes": 245
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "TCP",
+      "length": 66,
+      "info": "58691 \u2192 443 [ACK] Seq=948 Ack=4578 Win=130880 Len=0 TSval=1094197160 TSecr=1174109709",
+      "src": "10.56.75.254",
+      "dst": "35.153.219.14",
+      "flags": "0x0010",
+      "bytes": 66
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "TLSV1.3",
+      "length": 422,
+      "info": "Application Data",
+      "src": "35.153.219.14",
+      "dst": "10.56.75.254",
+      "flags": "0x0018",
+      "bytes": 422
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "TCP",
+      "length": 66,
+      "info": "58691 \u2192 443 [ACK] Seq=948 Ack=4934 Win=130688 Len=0 TSval=1094197163 TSecr=1174109714",
+      "src": "10.56.75.254",
+      "dst": "35.153.219.14",
+      "flags": "0x0010",
+      "bytes": 66
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "MDNS",
+      "length": 82,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.76.226",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 82
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "MDNS",
+      "length": 102,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 102
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "MDNS",
+      "length": 226,
+      "info": "5353 Standard query 0x0000 ANY f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local\\  \"QU\" question ANY Yashs-iPhone.local\\  \"QU\" question SRV 0 0 32498 Yashs-iPhone.local AAAA fe80::18a3:657f:91d3:5a2f A 10.56.76.152",
+      "src": "10.56.76.152",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 226
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "MDNS",
+      "length": 246,
+      "info": "5353 Standard query 0x0000 ANY f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local\\  \"QU\" question ANY Yashs-iPhone.local\\  \"QU\" question SRV 0 0 32498 Yashs-iPhone.local AAAA fe80::18a3:657f:91d3:5a2f A 10.56.76.152",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 246
+    },
+    {
+      "time": "14:18:35",
+      "protocol": "BROWSER",
+      "length": 243,
+      "info": "138 Host Announcement JPL-CCE-UMASHAN\\  Workstation\\  Server\\  NT Workstation",
+      "src": "10.56.110.122",
+      "dst": "10.56.255.255",
+      "flags": "",
+      "bytes": 243
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 87,
+      "info": "5353 Standard query 0x0000 PTR _spotify-connect._tcp.local\\  \"QM\" question",
+      "src": "10.56.76.226",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 87
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 107,
+      "info": "5353 Standard query 0x0000 PTR _spotify-connect._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 107
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 96,
+      "info": "5353 Standard query 0x0000 PTR _spotify-social-listening._tcp.local\\  \"QM\" question",
+      "src": "10.56.76.226",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 96
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 116,
+      "info": "5353 Standard query 0x0000 PTR _spotify-social-listening._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 116
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 246,
+      "info": "5353 Standard query 0x0000 ANY f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local\\  \"QM\" question ANY Yashs-iPhone.local\\  \"QM\" question SRV 0 0 32498 Yashs-iPhone.local AAAA fe80::18a3:657f:91d3:5a2f A 10.56.76.152",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 246
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 226,
+      "info": "5353 Standard query 0x0000 ANY f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local\\  \"QM\" question ANY Yashs-iPhone.local\\  \"QM\" question SRV 0 0 32498 Yashs-iPhone.local AAAA fe80::18a3:657f:91d3:5a2f A 10.56.76.152",
+      "src": "10.56.76.152",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 226
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 103,
+      "info": "5353 Standard query 0x004a PTR _googlecast._tcp.local\\  \"QM\" question PTR _233637DE._sub._googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.110.102",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 103
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 123,
+      "info": "5353 Standard query 0x004a PTR _googlecast._tcp.local\\  \"QM\" question PTR _233637DE._sub._googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 123
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 103,
+      "info": "5353 Standard query 0x0017 PTR _233637DE._sub._googlecast._tcp.local\\  \"QM\" question PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.76.183",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 103
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 123,
+      "info": "5353 Standard query 0x0017 PTR _233637DE._sub._googlecast._tcp.local\\  \"QM\" question PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 123
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 226,
+      "info": "5353 Standard query 0x0000 ANY f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local\\  \"QM\" question ANY Yashs-iPhone.local\\  \"QM\" question SRV 0 0 32498 Yashs-iPhone.local AAAA fe80::18a3:657f:91d3:5a2f A 10.56.76.152",
+      "src": "10.56.76.152",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 226
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 246,
+      "info": "5353 Standard query 0x0000 ANY f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local\\  \"QM\" question ANY Yashs-iPhone.local\\  \"QM\" question SRV 0 0 32498 Yashs-iPhone.local AAAA fe80::18a3:657f:91d3:5a2f A 10.56.76.152",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 246
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 229,
+      "info": "5353 Standard query response 0x0000 PTR\\  cache flush Yashs-iPhone.local PTR\\  cache flush Yashs-iPhone.local NSEC\\  cache flush F.2.A.5.3.D.1.9.F.7.5.6.3.A.8.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.E.F.ip6.arpa NSEC\\  cache flush 152.76.56.10.in-addr.arpa",
+      "src": "10.56.76.152",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 229
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 249,
+      "info": "5353 Standard query response 0x0000 PTR\\  cache flush Yashs-iPhone.local PTR\\  cache flush Yashs-iPhone.local NSEC\\  cache flush F.2.A.5.3.D.1.9.F.7.5.6.3.A.8.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.E.F.ip6.arpa NSEC\\  cache flush 152.76.56.10.in-addr.arpa",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 249
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 442,
+      "info": "5353 Standard query 0x0000 PTR _companion-link._tcp.local\\  \"QM\" question PTR _rdlink._tcp.local\\  \"QM\" question PTR Sushmit\u2019s MacBook Air._companion-link._tcp.local PTR Poulam\u2019s MacBook Air._companion-link._tcp.local PTR Aayush\u2019s MacBook Air._companion-link._tcp.local PTR Krishang\u2019s MacBook Air._companion-link._tcp.local PTR Charanjeet\u2019s MacBook Pro._companion-link._tcp.local PTR Nishant\u2019s MacBook Air._companion-link._tcp.local PTR RBIHYD\u2019s MacBook Air._companion-link._tcp.local PTR Amit\u2019s MacBook Pro._companion-link._tcp.local PTR vaishnavi\u2019s MacBook Air._companion-link._tcp.local",
+      "src": "10.56.76.152",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 442
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 462,
+      "info": "5353 Standard query 0x0000 PTR _companion-link._tcp.local\\  \"QM\" question PTR _rdlink._tcp.local\\  \"QM\" question PTR Sushmit\u2019s MacBook Air._companion-link._tcp.local PTR Poulam\u2019s MacBook Air._companion-link._tcp.local PTR Aayush\u2019s MacBook Air._companion-link._tcp.local PTR Krishang\u2019s MacBook Air._companion-link._tcp.local PTR Charanjeet\u2019s MacBook Pro._companion-link._tcp.local PTR Nishant\u2019s MacBook Air._companion-link._tcp.local PTR RBIHYD\u2019s MacBook Air._companion-link._tcp.local PTR Amit\u2019s MacBook Pro._companion-link._tcp.local PTR vaishnavi\u2019s MacBook Air._companion-link._tcp.local",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 462
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 119,
+      "info": "5353 Standard query 0x0001 PTR _CC1AD845._sub._googlecast._tcp.local\\  \"QU\" question PTR _CC32E753._sub._googlecast._tcp.local\\  \"QU\" question PTR _googlecast._tcp.local\\  \"QU\" question",
+      "src": "10.56.76.226",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 119
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 139,
+      "info": "5353 Standard query 0x0001 PTR _CC1AD845._sub._googlecast._tcp.local\\  \"QU\" question PTR _CC32E753._sub._googlecast._tcp.local\\  \"QU\" question PTR _googlecast._tcp.local\\  \"QU\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 139
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 347,
+      "info": "5353 Standard query response 0x0000 TXT\\  cache flush PTR _apple-mobdev2._tcp.local PTR f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local PTR f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local SRV\\  cache flush 0 0 32498 Yashs-iPhone.local AAAA\\  cache flush fe80::18a3:657f:91d3:5a2f A\\  cache flush 10.56.76.152 NSEC\\  cache flush f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local NSEC\\  cache flush Yashs-iPhone.local",
+      "src": "10.56.76.152",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 347
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 367,
+      "info": "5353 Standard query response 0x0000 TXT\\  cache flush PTR _apple-mobdev2._tcp.local PTR f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local PTR f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local SRV\\  cache flush 0 0 32498 Yashs-iPhone.local AAAA\\  cache flush fe80::18a3:657f:91d3:5a2f A\\  cache flush 10.56.76.152 NSEC\\  cache flush f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local NSEC\\  cache flush Yashs-iPhone.local",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 367
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 82,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.76.226",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 82
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "MDNS",
+      "length": 102,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 102
+    },
+    {
+      "time": "14:18:36",
+      "protocol": "LLC",
+      "length": 22,
+      "info": "S P\\  func=RNR\\  N(R)=64; DSAP NULL LSAP Individual\\  SSAP NULL LSAP Command",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 22
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "0X746F",
+      "length": 20,
+      "info": "Ethernet II",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 20
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 392,
+      "info": "5353 Standard query 0x0000 PTR lb._dns-sd._udp.local\\  \"QU\" question PTR _airport._tcp.local\\  \"QU\" question PTR _rdlink._tcp.local\\  \"QU\" question PTR _printer._tcp.local\\  \"QU\" question PTR _ptp._tcp.local\\  \"QU\" question PTR _uscan._tcp.local\\  \"QU\" question PTR _pdl-datastream._tcp.local\\  \"QU\" question PTR _ipp._tcp.local\\  \"QU\" question PTR _scanner._tcp.local\\  \"QU\" question PTR _ippusb._tcp.local\\  \"QU\" question PTR _ipps._tcp.local\\  \"QU\" question PTR _uscans._tcp.local\\  \"QU\" question PTR _googlecast._tcp.local\\  \"QU\" question PTR _daap._tcp.local\\  \"QU\" question PTR _touch-remote._tcp.local\\  \"QU\" question PTR _airplay._tcp.local\\  \"QU\" question PTR _raop._tcp.local\\  \"QU\" question PTR _afpovertcp._tcp.local\\  \"QU\" question PTR _smb._tcp.local\\  \"QU\" question PTR _rfb._tcp.local\\  \"QU\" question PTR _adisk._tcp.local\\  \"QU\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 392
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 249,
+      "info": "5353 Standard query response 0x0000 PTR\\  cache flush praneeths-mac.local PTR\\  cache flush praneeths-mac.local NSEC\\  cache flush 4.1.2.8.F.6.9.8.4.7.A.2.3.1.4.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.E.F.ip6.arpa NSEC\\  cache flush 80.76.56.10.in-addr.arpa",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 249
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 280,
+      "info": "5353 Standard query 0x0000 PTR _apple-mobdev._tcp.local\\  \"QU\" question PTR _itsdlgt._tcp.local\\  \"QU\" question PTR _companion-link._tcp.local\\  \"QU\" question PTR _airplay._tcp.local\\  \"QU\" question PTR 92f307d4._sub._apple-mobdev2._tcp.local\\  \"QU\" question PTR _raop._tcp.local\\  \"QU\" question PTR _apple-pairable._tcp.local\\  \"QU\" question TXT praneeth's mac._airplay._tcp.local\\  \"QU\" question TXT 2E8707D002F3@praneeth's mac._raop._tcp.local\\  \"QU\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 280
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 372,
+      "info": "5353 Standard query 0x0000 PTR lb._dns-sd._udp.local\\  \"QU\" question PTR _airport._tcp.local\\  \"QU\" question PTR _rdlink._tcp.local\\  \"QU\" question PTR _printer._tcp.local\\  \"QU\" question PTR _ptp._tcp.local\\  \"QU\" question PTR _uscan._tcp.local\\  \"QU\" question PTR _pdl-datastream._tcp.local\\  \"QU\" question PTR _ipp._tcp.local\\  \"QU\" question PTR _scanner._tcp.local\\  \"QU\" question PTR _ippusb._tcp.local\\  \"QU\" question PTR _ipps._tcp.local\\  \"QU\" question PTR _uscans._tcp.local\\  \"QU\" question PTR _googlecast._tcp.local\\  \"QU\" question PTR _daap._tcp.local\\  \"QU\" question PTR _touch-remote._tcp.local\\  \"QU\" question PTR _airplay._tcp.local\\  \"QU\" question PTR _raop._tcp.local\\  \"QU\" question PTR _afpovertcp._tcp.local\\  \"QU\" question PTR _smb._tcp.local\\  \"QU\" question PTR _rfb._tcp.local\\  \"QU\" question PTR _adisk._tcp.local\\  \"QU\" question",
+      "src": "10.56.76.80",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 372
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 87,
+      "info": "5353 Standard query 0x0000 PTR _spotify-connect._tcp.local\\  \"QM\" question",
+      "src": "10.56.76.80",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 87
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 87,
+      "info": "5353 Standard query 0x0000 PTR _spotify-connect._tcp.local\\  \"QM\" question",
+      "src": "10.56.76.80",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 87
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 107,
+      "info": "5353 Standard query 0x0000 PTR _spotify-connect._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 107
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 107,
+      "info": "5353 Standard query 0x0000 PTR _spotify-connect._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 107
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "UDP",
+      "length": 86,
+      "info": "57621 57621 \u2192 57621 Len=44",
+      "src": "10.56.76.80",
+      "dst": "10.56.255.255",
+      "flags": "",
+      "bytes": 86
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 197,
+      "info": "5353 Standard query response 0x0000 PTR\\  cache flush praneeths-mac.local NSEC\\  cache flush 4.1.2.8.F.6.9.8.4.7.A.2.3.1.4.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.E.F.ip6.arpa",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 197
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 119,
+      "info": "5353 Standard query 0x0002 PTR _CC1AD845._sub._googlecast._tcp.local\\  \"QM\" question PTR _CC32E753._sub._googlecast._tcp.local\\  \"QM\" question PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.76.226",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 119
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 139,
+      "info": "5353 Standard query 0x0002 PTR _CC1AD845._sub._googlecast._tcp.local\\  \"QM\" question PTR _CC32E753._sub._googlecast._tcp.local\\  \"QM\" question PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 139
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 474,
+      "info": "5353 Standard query 0x0000 PTR lb._dns-sd._udp.local\\  \"QU\" question PTR _airport._tcp.local\\  \"QU\" question PTR _rdlink._tcp.local\\  \"QU\" question PTR _printer._tcp.local\\  \"QU\" question PTR _ptp._tcp.local\\  \"QU\" question PTR _uscan._tcp.local\\  \"QU\" question PTR _pdl-datastream._tcp.local\\  \"QU\" question PTR _ipp._tcp.local\\  \"QU\" question PTR _scanner._tcp.local\\  \"QU\" question PTR _ippusb._tcp.local\\  \"QU\" question PTR _ipps._tcp.local\\  \"QU\" question PTR _uscans._tcp.local\\  \"QU\" question PTR _daap._tcp.local\\  \"QU\" question PTR _touch-remote._tcp.local\\  \"QU\" question PTR _airplay._tcp.local\\  \"QU\" question PTR _raop._tcp.local\\  \"QU\" question PTR _afpovertcp._tcp.local\\  \"QU\" question PTR _smb._tcp.local\\  \"QU\" question PTR _rfb._tcp.local\\  \"QU\" question PTR _adisk._tcp.local\\  \"QU\" question PTR _apple-mobdev._tcp.local\\  \"QU\" question PTR _companion-link._tcp.local\\  \"QU\" question PTR 92f307d4._sub._apple-mobdev2._tcp.local\\  \"QU\" question PTR _apple-pairable._tcp.local\\  \"QU\" question TXT praneeth's mac._airplay._tcp.local\\  \"QU\" question",
+      "src": "10.56.76.80",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 474
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 494,
+      "info": "5353 Standard query 0x0000 PTR lb._dns-sd._udp.local\\  \"QU\" question PTR _airport._tcp.local\\  \"QU\" question PTR _rdlink._tcp.local\\  \"QU\" question PTR _printer._tcp.local\\  \"QU\" question PTR _ptp._tcp.local\\  \"QU\" question PTR _uscan._tcp.local\\  \"QU\" question PTR _pdl-datastream._tcp.local\\  \"QU\" question PTR _ipp._tcp.local\\  \"QU\" question PTR _scanner._tcp.local\\  \"QU\" question PTR _ippusb._tcp.local\\  \"QU\" question PTR _ipps._tcp.local\\  \"QU\" question PTR _uscans._tcp.local\\  \"QU\" question PTR _daap._tcp.local\\  \"QU\" question PTR _touch-remote._tcp.local\\  \"QU\" question PTR _airplay._tcp.local\\  \"QU\" question PTR _raop._tcp.local\\  \"QU\" question PTR _afpovertcp._tcp.local\\  \"QU\" question PTR _smb._tcp.local\\  \"QU\" question PTR _rfb._tcp.local\\  \"QU\" question PTR _adisk._tcp.local\\  \"QU\" question PTR _apple-mobdev._tcp.local\\  \"QU\" question PTR _companion-link._tcp.local\\  \"QU\" question PTR 92f307d4._sub._apple-mobdev2._tcp.local\\  \"QU\" question PTR _apple-pairable._tcp.local\\  \"QU\" question TXT praneeth's mac._airplay._tcp.local\\  \"QU\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 494
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 82,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.102.228",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 82
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 102,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 102
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 82,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.102.228",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 82
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 102,
+      "info": "5353 Standard query 0x0000 PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 102
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 229,
+      "info": "5353 Standard query response 0x0000 PTR\\  cache flush praneeths-mac.local PTR\\  cache flush praneeths-mac.local NSEC\\  cache flush 4.1.2.8.F.6.9.8.4.7.A.2.3.1.4.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.E.F.ip6.arpa NSEC\\  cache flush 80.76.56.10.in-addr.arpa",
+      "src": "10.56.76.80",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 229
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 249,
+      "info": "5353 Standard query response 0x0000 PTR\\  cache flush praneeths-mac.local PTR\\  cache flush praneeths-mac.local NSEC\\  cache flush 4.1.2.8.F.6.9.8.4.7.A.2.3.1.4.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.E.F.ip6.arpa NSEC\\  cache flush 80.76.56.10.in-addr.arpa",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 249
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "DHCP",
+      "length": 342,
+      "info": "67 DHCP Request  - Transaction ID 0x28af1369",
+      "src": "0.0.0.0",
+      "dst": "255.255.255.255",
+      "flags": "",
+      "bytes": 342
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "ARP",
+      "length": 42,
+      "info": "Who has 10.56.76.80? Tell 10.56.75.254",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 42
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 1100,
+      "info": "5353 Standard query response 0x0000 PTR Aayush\u2019s MacBook Air._airplay._tcp.local PTR 4AF826D55935@Aayush\u2019s MacBook Air._raop._tcp.local PTR Aayush\u2019s MacBook Air._companion-link._tcp.local SRV\\  cache flush 0 0 7000 Aayushs-MacBook-Air-2.local TXT\\  cache flush TXT SRV\\  cache flush 0 0 7000 Aayushs-MacBook-Air-2.local TXT\\  cache flush SRV\\  cache flush 0 0 64176 Aayushs-MacBook-Air-2.local TXT\\  cache flush AAAA\\  cache flush fe80::1814:37bd:b83b:43b7 A\\  cache flush 10.56.75.254",
+      "src": "10.56.75.254",
+      "dst": "10.56.76.80",
+      "flags": "",
+      "bytes": 1100
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 435,
+      "info": "5353 Standard query response 0x0000 PTR Nishant\u2019s MacBook Air._rfb._tcp.local TXT PTR Nishant\u2019s MacBook Air._smb._tcp.local TXT\\  cache flush TXT\\  cache flush SRV\\  cache flush 0 0 445 Nishants-MacBook-Air-2.local SRV\\  cache flush 0 0 5900 Nishants-MacBook-Air-2.local AAAA\\  cache flush fe80::1c55:65bb:2d44:d8fd A\\  cache flush 10.56.76.105 NSEC\\  cache flush Nishant\u2019s MacBook Air._rfb._tcp.local NSEC\\  cache flush Nishant\u2019s MacBook Air._smb._tcp.local NSEC\\  cache flush Nishants-MacBook-Air-2.local",
+      "src": "10.56.76.105",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 435
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 455,
+      "info": "5353 Standard query response 0x0000 PTR Nishant\u2019s MacBook Air._rfb._tcp.local TXT PTR Nishant\u2019s MacBook Air._smb._tcp.local TXT\\  cache flush TXT\\  cache flush SRV\\  cache flush 0 0 445 Nishants-MacBook-Air-2.local SRV\\  cache flush 0 0 5900 Nishants-MacBook-Air-2.local AAAA\\  cache flush fe80::1c55:65bb:2d44:d8fd A\\  cache flush 10.56.76.105 NSEC\\  cache flush Nishant\u2019s MacBook Air._rfb._tcp.local NSEC\\  cache flush Nishant\u2019s MacBook Air._smb._tcp.local NSEC\\  cache flush Nishants-MacBook-Air-2.local",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 455
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 347,
+      "info": "5353 Standard query response 0x0000 TXT\\  cache flush PTR _apple-mobdev2._tcp.local PTR f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local PTR f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local SRV\\  cache flush 0 0 32498 Yashs-iPhone.local AAAA\\  cache flush fe80::18a3:657f:91d3:5a2f A\\  cache flush 10.56.76.152 NSEC\\  cache flush f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local NSEC\\  cache flush Yashs-iPhone.local",
+      "src": "10.56.76.152",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 347
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 367,
+      "info": "5353 Standard query response 0x0000 TXT\\  cache flush PTR _apple-mobdev2._tcp.local PTR f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local PTR f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local SRV\\  cache flush 0 0 32498 Yashs-iPhone.local AAAA\\  cache flush fe80::18a3:657f:91d3:5a2f A\\  cache flush 10.56.76.152 NSEC\\  cache flush f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local NSEC\\  cache flush Yashs-iPhone.local",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 367
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 107,
+      "info": "5353 Standard query 0x0000 PTR _spotify-connect._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 107
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 87,
+      "info": "5353 Standard query 0x0000 PTR _spotify-connect._tcp.local\\  \"QM\" question",
+      "src": "10.56.76.226",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 87
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 87,
+      "info": "5353 Standard query 0x0000 PTR _spotify-connect._tcp.local\\  \"QM\" question",
+      "src": "10.56.76.80",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 87
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 107,
+      "info": "5353 Standard query 0x0000 PTR _spotify-connect._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 107
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 295,
+      "info": "5353 Standard query 0x0000 ANY praneeth's mac._airplay._tcp.local\\  \"QU\" question ANY 2E8707D002F3@praneeth's mac._raop._tcp.local\\  \"QU\" question ANY praneeth's mac._companion-link._tcp.local\\  \"QU\" question ANY praneeths-mac.local\\  \"QU\" question SRV 0 0 7000 praneeths-mac.local SRV 0 0 7000 praneeths-mac.local SRV 0 0 50428 praneeths-mac.local AAAA fe80::413:2a74:896f:8214 A 10.56.76.80",
+      "src": "10.56.76.80",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 295
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 315,
+      "info": "5353 Standard query 0x0000 ANY praneeth's mac._airplay._tcp.local\\  \"QU\" question ANY 2E8707D002F3@praneeth's mac._raop._tcp.local\\  \"QU\" question ANY praneeth's mac._companion-link._tcp.local\\  \"QU\" question ANY praneeths-mac.local\\  \"QU\" question SRV 0 0 7000 praneeths-mac.local SRV 0 0 7000 praneeths-mac.local SRV 0 0 50428 praneeths-mac.local AAAA fe80::413:2a74:896f:8214 A 10.56.76.80",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 315
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "TCP",
+      "length": 78,
+      "info": "50443 \u2192 7000 [SYN\\  ECE\\  CWR] Seq=0 Win=65535 Len=0 MSS=1460 WS=64 TSval=1072419124 TSecr=0 SACK_PERM",
+      "src": "10.56.76.80",
+      "dst": "10.56.75.254",
+      "flags": "0x00c2",
+      "bytes": 78
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "ARP",
+      "length": 42,
+      "info": "Who has 10.56.76.80? Tell 10.56.75.254",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 42
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "TCP",
+      "length": 78,
+      "info": "7000 \u2192 50443 [SYN\\  ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=1460 WS=64 TSval=4081070443 TSecr=1072419124 SACK_PERM",
+      "src": "10.56.75.254",
+      "dst": "10.56.76.80",
+      "flags": "0x0012",
+      "bytes": 78
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 91,
+      "info": "5353 Standard query 0x0000 PTR _raop._tcp.local\\  \"QM\" question PTR _airplay._tcp.local\\  \"QM\" question",
+      "src": "10.56.75.212",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 91
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 111,
+      "info": "5353 Standard query 0x0000 PTR _raop._tcp.local\\  \"QM\" question PTR _airplay._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 111
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "0X740F",
+      "length": 56,
+      "info": "Ethernet II",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 56
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "TCP",
+      "length": 66,
+      "info": "50443 \u2192 7000 [ACK] Seq=1 Ack=1 Win=131712 Len=0 TSval=1072419771 TSecr=4081070443",
+      "src": "10.56.76.80",
+      "dst": "10.56.75.254",
+      "flags": "0x0010",
+      "bytes": 66
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "ARP",
+      "length": 42,
+      "info": "Who has 10.56.76.80? Tell 10.56.75.254",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 42
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "TCP",
+      "length": 66,
+      "info": "[TCP Window Update] 7000 \u2192 50443 [ACK] Seq=1 Ack=1 Win=131712 Len=0 TSval=4081070556 TSecr=1072419771",
+      "src": "10.56.75.254",
+      "dst": "10.56.76.80",
+      "flags": "0x0010",
+      "bytes": 66
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 984,
+      "info": "5353 Standard query response 0x0000 PTR Aayush\u2019s MacBook Air._airplay._tcp.local PTR 4AF826D55935@Aayush\u2019s MacBook Air._raop._tcp.local TXT TXT\\  cache flush TXT\\  cache flush SRV\\  cache flush 0 0 7000 Aayushs-MacBook-Air-2.local SRV\\  cache flush 0 0 7000 Aayushs-MacBook-Air-2.local AAAA\\  cache flush fe80::1814:37bd:b83b:43b7 A\\  cache flush 10.56.75.254 NSEC\\  cache flush Aayush\u2019s MacBook Air._airplay._tcp.local NSEC\\  cache flush 4AF826D55935@Aayush\u2019s MacBook Air._raop._tcp.local NSEC\\  cache flush Aayushs-MacBook-Air-2.local",
+      "src": "10.56.75.254",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 984
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 1004,
+      "info": "5353 Standard query response 0x0000 PTR Aayush\u2019s MacBook Air._airplay._tcp.local PTR 4AF826D55935@Aayush\u2019s MacBook Air._raop._tcp.local TXT TXT\\  cache flush TXT\\  cache flush SRV\\  cache flush 0 0 7000 Aayushs-MacBook-Air-2.local SRV\\  cache flush 0 0 7000 Aayushs-MacBook-Air-2.local AAAA\\  cache flush fe80::1814:37bd:b83b:43b7 A\\  cache flush 10.56.75.254 NSEC\\  cache flush Aayush\u2019s MacBook Air._airplay._tcp.local NSEC\\  cache flush 4AF826D55935@Aayush\u2019s MacBook Air._raop._tcp.local NSEC\\  cache flush Aayushs-MacBook-Air-2.local",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 1004
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "TCP",
+      "length": 107,
+      "info": "50443 \u2192 7000 [PSH\\  ACK] Seq=1 Ack=1 Win=131712 Len=41 TSval=1072419771 TSecr=4081070443",
+      "src": "10.56.76.80",
+      "dst": "10.56.75.254",
+      "flags": "0x0018",
+      "bytes": 107
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "ARP",
+      "length": 42,
+      "info": "Who has 10.56.76.80? Tell 10.56.75.254",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 42
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 997,
+      "info": "5353 Standard query response 0x0000 TXT PTR Amit\u2019s MacBook Pro._airplay._tcp.local PTR A078179B9DEC@Amit\u2019s MacBook Pro._raop._tcp.local TXT\\  cache flush TXT\\  cache flush SRV\\  cache flush 0 0 7000 Amits-MacBook-Pro.local SRV\\  cache flush 0 0 7000 Amits-MacBook-Pro.local AAAA\\  cache flush fe80::141b:b6a7:61d:3c74 A\\  cache flush 10.56.112.85 NSEC\\  cache flush Amit\u2019s MacBook Pro._airplay._tcp.local NSEC\\  cache flush A078179B9DEC@Amit\u2019s MacBook Pro._raop._tcp.local NSEC\\  cache flush Amits-MacBook-Pro.local",
+      "src": "10.56.112.85",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 997
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 1017,
+      "info": "5353 Standard query response 0x0000 TXT PTR Amit\u2019s MacBook Pro._airplay._tcp.local PTR A078179B9DEC@Amit\u2019s MacBook Pro._raop._tcp.local TXT\\  cache flush TXT\\  cache flush SRV\\  cache flush 0 0 7000 Amits-MacBook-Pro.local SRV\\  cache flush 0 0 7000 Amits-MacBook-Pro.local AAAA\\  cache flush fe80::141b:b6a7:61d:3c74 A\\  cache flush 10.56.112.85 NSEC\\  cache flush Amit\u2019s MacBook Pro._airplay._tcp.local NSEC\\  cache flush A078179B9DEC@Amit\u2019s MacBook Pro._raop._tcp.local NSEC\\  cache flush Amits-MacBook-Pro.local",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 1017
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 1027,
+      "info": "5353 Standard query response 0x0000 PTR Sushmit\u2019s MacBook Air._airplay._tcp.local PTR BAC0F4FBC49A@Sushmit\u2019s MacBook Air._raop._tcp.local TXT TXT\\  cache flush TXT\\  cache flush SRV\\  cache flush 0 0 7000 Sushmits-MacBook-Air.local SRV\\  cache flush 0 0 7000 Sushmits-MacBook-Air.local AAAA\\  cache flush fe80::1825:3145:7aab:4fbd A\\  cache flush 10.56.77.50 NSEC\\  cache flush Sushmit\u2019s MacBook Air._airplay._tcp.local NSEC\\  cache flush BAC0F4FBC49A@Sushmit\u2019s MacBook Air._raop._tcp.local NSEC\\  cache flush Sushmits-MacBook-Air.local",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 1027
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 1007,
+      "info": "5353 Standard query response 0x0000 PTR Sushmit\u2019s MacBook Air._airplay._tcp.local PTR BAC0F4FBC49A@Sushmit\u2019s MacBook Air._raop._tcp.local TXT TXT\\  cache flush TXT\\  cache flush SRV\\  cache flush 0 0 7000 Sushmits-MacBook-Air.local SRV\\  cache flush 0 0 7000 Sushmits-MacBook-Air.local AAAA\\  cache flush fe80::1825:3145:7aab:4fbd A\\  cache flush 10.56.77.50 NSEC\\  cache flush Sushmit\u2019s MacBook Air._airplay._tcp.local NSEC\\  cache flush BAC0F4FBC49A@Sushmit\u2019s MacBook Air._raop._tcp.local NSEC\\  cache flush Sushmits-MacBook-Air.local",
+      "src": "10.56.77.50",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 1007
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 984,
+      "info": "5353 Standard query response 0x0000 PTR Poulam\u2019s MacBook Air._airplay._tcp.local PTR A22A11AB79C6@Poulam\u2019s MacBook Air._raop._tcp.local TXT TXT\\  cache flush TXT\\  cache flush SRV\\  cache flush 0 0 7000 Poulams-MacBook-Air.local SRV\\  cache flush 0 0 7000 Poulams-MacBook-Air.local AAAA\\  cache flush fe80::4c:dbf4:2b5b:4691 A\\  cache flush 10.56.76.65 NSEC\\  cache flush Poulam\u2019s MacBook Air._airplay._tcp.local NSEC\\  cache flush A22A11AB79C6@Poulam\u2019s MacBook Air._raop._tcp.local NSEC\\  cache flush Poulams-MacBook-Air.local",
+      "src": "10.56.76.65",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 984
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 1004,
+      "info": "5353 Standard query response 0x0000 PTR Poulam\u2019s MacBook Air._airplay._tcp.local PTR A22A11AB79C6@Poulam\u2019s MacBook Air._raop._tcp.local TXT TXT\\  cache flush TXT\\  cache flush SRV\\  cache flush 0 0 7000 Poulams-MacBook-Air.local SRV\\  cache flush 0 0 7000 Poulams-MacBook-Air.local AAAA\\  cache flush fe80::4c:dbf4:2b5b:4691 A\\  cache flush 10.56.76.65 NSEC\\  cache flush Poulam\u2019s MacBook Air._airplay._tcp.local NSEC\\  cache flush A22A11AB79C6@Poulam\u2019s MacBook Air._raop._tcp.local NSEC\\  cache flush Poulams-MacBook-Air.local",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 1004
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 229,
+      "info": "5353 Standard query response 0x0000 PTR\\  cache flush praneeths-mac.local PTR\\  cache flush praneeths-mac.local NSEC\\  cache flush 4.1.2.8.F.6.9.8.4.7.A.2.3.1.4.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.E.F.ip6.arpa NSEC\\  cache flush 80.76.56.10.in-addr.arpa",
+      "src": "10.56.76.80",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 229
+    },
+    {
+      "time": "14:18:37",
+      "protocol": "MDNS",
+      "length": 249,
+      "info": "5353 Standard query response 0x0000 PTR\\  cache flush praneeths-mac.local PTR\\  cache flush praneeths-mac.local NSEC\\  cache flush 4.1.2.8.F.6.9.8.4.7.A.2.3.1.4.0.0.0.0.0.0.0.0.0.0.0.0.0.0.8.E.F.ip6.arpa NSEC\\  cache flush 80.76.56.10.in-addr.arpa",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 249
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 982,
+      "info": "5353 Standard query response 0x0000 PTR RBIHYD\u2019s MacBook Air._airplay._tcp.local PTR EAA828A28194@RBIHYD\u2019s MacBook Air._raop._tcp.local TXT TXT\\  cache flush TXT\\  cache flush SRV\\  cache flush 0 0 7000 RBIHYDs-MacBook-Air.local SRV\\  cache flush 0 0 7000 RBIHYDs-MacBook-Air.local AAAA\\  cache flush fe80::ba:ba76:9a09:c901 A\\  cache flush 10.56.109.25 NSEC\\  cache flush RBIHYD\u2019s MacBook Air._airplay._tcp.local NSEC\\  cache flush EAA828A28194@RBIHYD\u2019s MacBook Air._raop._tcp.local NSEC\\  cache flush RBIHYDs-MacBook-Air.local",
+      "src": "10.56.109.25",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 982
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 1002,
+      "info": "5353 Standard query response 0x0000 PTR RBIHYD\u2019s MacBook Air._airplay._tcp.local PTR EAA828A28194@RBIHYD\u2019s MacBook Air._raop._tcp.local TXT TXT\\  cache flush TXT\\  cache flush SRV\\  cache flush 0 0 7000 RBIHYDs-MacBook-Air.local SRV\\  cache flush 0 0 7000 RBIHYDs-MacBook-Air.local AAAA\\  cache flush fe80::ba:ba76:9a09:c901 A\\  cache flush 10.56.109.25 NSEC\\  cache flush RBIHYD\u2019s MacBook Air._airplay._tcp.local NSEC\\  cache flush EAA828A28194@RBIHYD\u2019s MacBook Air._raop._tcp.local NSEC\\  cache flush RBIHYDs-MacBook-Air.local",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 1002
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 1011,
+      "info": "5353 Standard query response 0x0000 TXT PTR Nishant\u2019s MacBook Air._airplay._tcp.local PTR 760915ED9923@Nishant\u2019s MacBook Air._raop._tcp.local TXT\\  cache flush TXT\\  cache flush SRV\\  cache flush 0 0 7000 Nishants-MacBook-Air-2.local SRV\\  cache flush 0 0 7000 Nishants-MacBook-Air-2.local AAAA\\  cache flush fe80::1c55:65bb:2d44:d8fd A\\  cache flush 10.56.76.105 NSEC\\  cache flush Nishant\u2019s MacBook Air._airplay._tcp.local NSEC\\  cache flush 760915ED9923@Nishant\u2019s MacBook Air._raop._tcp.local NSEC\\  cache flush Nishants-MacBook-Air-2.local",
+      "src": "10.56.76.105",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 1011
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 1031,
+      "info": "5353 Standard query response 0x0000 TXT PTR Nishant\u2019s MacBook Air._airplay._tcp.local PTR 760915ED9923@Nishant\u2019s MacBook Air._raop._tcp.local TXT\\  cache flush TXT\\  cache flush SRV\\  cache flush 0 0 7000 Nishants-MacBook-Air-2.local SRV\\  cache flush 0 0 7000 Nishants-MacBook-Air-2.local AAAA\\  cache flush fe80::1c55:65bb:2d44:d8fd A\\  cache flush 10.56.76.105 NSEC\\  cache flush Nishant\u2019s MacBook Air._airplay._tcp.local NSEC\\  cache flush 760915ED9923@Nishant\u2019s MacBook Air._raop._tcp.local NSEC\\  cache flush Nishants-MacBook-Air-2.local",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 1031
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 70,
+      "info": "5353 Standard query 0x0000 A wpad.local\\  \"QM\" question",
+      "src": "10.56.102.228",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 70
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 90,
+      "info": "5353 Standard query 0x0000 A wpad.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 90
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 295,
+      "info": "5353 Standard query 0x0000 ANY praneeth's mac._airplay._tcp.local\\  \"QM\" question ANY 2E8707D002F3@praneeth's mac._raop._tcp.local\\  \"QM\" question ANY praneeth's mac._companion-link._tcp.local\\  \"QM\" question ANY praneeths-mac.local\\  \"QM\" question SRV 0 0 7000 praneeths-mac.local SRV 0 0 7000 praneeths-mac.local SRV 0 0 50428 praneeths-mac.local AAAA fe80::413:2a74:896f:8214 A 10.56.76.80",
+      "src": "10.56.76.80",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 295
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 315,
+      "info": "5353 Standard query 0x0000 ANY praneeth's mac._airplay._tcp.local\\  \"QM\" question ANY 2E8707D002F3@praneeth's mac._raop._tcp.local\\  \"QM\" question ANY praneeth's mac._companion-link._tcp.local\\  \"QM\" question ANY praneeths-mac.local\\  \"QM\" question SRV 0 0 7000 praneeths-mac.local SRV 0 0 7000 praneeths-mac.local SRV 0 0 50428 praneeths-mac.local AAAA fe80::413:2a74:896f:8214 A 10.56.76.80",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 315
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 70,
+      "info": "5353 Standard query 0x0000 A wpad.local\\  \"QM\" question",
+      "src": "10.56.102.228",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 70
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 90,
+      "info": "5353 Standard query 0x0000 A wpad.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 90
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 993,
+      "info": "5353 Standard query response 0x0000 PTR Krishang\u2019s MacBook Air._airplay._tcp.local PTR D62E4B8CAC41@Krishang\u2019s MacBook Air._raop._tcp.local TXT TXT\\  cache flush TXT\\  cache flush SRV\\  cache flush 0 0 7000 Krishangs-MacBook-Air.local SRV\\  cache flush 0 0 7000 Krishangs-MacBook-Air.local AAAA\\  cache flush fe80::1411:eccd:1a59:eed4 A\\  cache flush 10.56.110.60 NSEC\\  cache flush Krishang\u2019s MacBook Air._airplay._tcp.local NSEC\\  cache flush D62E4B8CAC41@Krishang\u2019s MacBook Air._raop._tcp.local NSEC\\  cache flush Krishangs-MacBook-Air.local",
+      "src": "10.56.110.60",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 993
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 1013,
+      "info": "5353 Standard query response 0x0000 PTR Krishang\u2019s MacBook Air._airplay._tcp.local PTR D62E4B8CAC41@Krishang\u2019s MacBook Air._raop._tcp.local TXT TXT\\  cache flush TXT\\  cache flush SRV\\  cache flush 0 0 7000 Krishangs-MacBook-Air.local SRV\\  cache flush 0 0 7000 Krishangs-MacBook-Air.local AAAA\\  cache flush fe80::1411:eccd:1a59:eed4 A\\  cache flush 10.56.110.60 NSEC\\  cache flush Krishang\u2019s MacBook Air._airplay._tcp.local NSEC\\  cache flush D62E4B8CAC41@Krishang\u2019s MacBook Air._raop._tcp.local NSEC\\  cache flush Krishangs-MacBook-Air.local",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 1013
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 295,
+      "info": "5353 Standard query 0x0000 ANY praneeth's mac._airplay._tcp.local\\  \"QM\" question ANY 2E8707D002F3@praneeth's mac._raop._tcp.local\\  \"QM\" question ANY praneeth's mac._companion-link._tcp.local\\  \"QM\" question ANY praneeths-mac.local\\  \"QM\" question SRV 0 0 7000 praneeths-mac.local SRV 0 0 7000 praneeths-mac.local SRV 0 0 50428 praneeths-mac.local AAAA fe80::413:2a74:896f:8214 A 10.56.76.80",
+      "src": "10.56.76.80",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 295
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 315,
+      "info": "5353 Standard query 0x0000 ANY praneeth's mac._airplay._tcp.local\\  \"QM\" question ANY 2E8707D002F3@praneeth's mac._raop._tcp.local\\  \"QM\" question ANY praneeth's mac._companion-link._tcp.local\\  \"QM\" question ANY praneeths-mac.local\\  \"QM\" question SRV 0 0 7000 praneeths-mac.local SRV 0 0 7000 praneeths-mac.local SRV 0 0 50428 praneeths-mac.local AAAA fe80::413:2a74:896f:8214 A 10.56.76.80",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 315
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 229,
+      "info": "5353 Standard query response 0x0000 PTR\\  cache flush Yashs-iPhone.local PTR\\  cache flush Yashs-iPhone.local NSEC\\  cache flush F.2.A.5.3.D.1.9.F.7.5.6.3.A.8.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.E.F.ip6.arpa NSEC\\  cache flush 152.76.56.10.in-addr.arpa",
+      "src": "10.56.76.152",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 229
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 249,
+      "info": "5353 Standard query response 0x0000 PTR\\  cache flush Yashs-iPhone.local PTR\\  cache flush Yashs-iPhone.local NSEC\\  cache flush F.2.A.5.3.D.1.9.F.7.5.6.3.A.8.1.0.0.0.0.0.0.0.0.0.0.0.0.0.8.E.F.ip6.arpa NSEC\\  cache flush 152.76.56.10.in-addr.arpa",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 249
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 736,
+      "info": "5353 Standard query 0x0000 PTR lb._dns-sd._udp.local\\  \"QM\" question PTR _airport._tcp.local\\  \"QM\" question PTR _rdlink._tcp.local\\  \"QM\" question PTR _printer._tcp.local\\  \"QM\" question PTR _ptp._tcp.local\\  \"QM\" question PTR _uscan._tcp.local\\  \"QM\" question PTR _pdl-datastream._tcp.local\\  \"QM\" question PTR _ipp._tcp.local\\  \"QM\" question PTR _scanner._tcp.local\\  \"QM\" question PTR _ippusb._tcp.local\\  \"QM\" question PTR _ipps._tcp.local\\  \"QM\" question PTR _uscans._tcp.local\\  \"QM\" question PTR _daap._tcp.local\\  \"QM\" question PTR _touch-remote._tcp.local\\  \"QM\" question PTR _afpovertcp._tcp.local\\  \"QM\" question PTR _adisk._tcp.local\\  \"QM\" question PTR _apple-mobdev._tcp.local\\  \"QM\" question PTR _companion-link._tcp.local\\  \"QM\" question PTR 92f307d4._sub._apple-mobdev2._tcp.local\\  \"QM\" question PTR _apple-pairable._tcp.local\\  \"QM\" question TXT praneeth's mac._airplay._tcp.local\\  \"QM\" question PTR RBIHYD\u2019s MacBook Air._companion-link._tcp.local PTR Krishang\u2019s MacBook Air._companion-link._tcp.local PTR Poulam\u2019s MacBook Air._companion-link._tcp.local PTR Amit\u2019s MacBook Pro._companion-link._tcp.local PTR Charanjeet\u2019s MacBook Pro._companion-link._tcp.local PTR Aayush\u2019s MacBook Air._companion-link._tcp.local PTR Nishant\u2019s MacBook Air._companion-link._tcp.local PTR Sushmit\u2019s MacBook Air._companion-link._tcp.local",
+      "src": "10.56.76.80",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 736
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 756,
+      "info": "5353 Standard query 0x0000 PTR lb._dns-sd._udp.local\\  \"QM\" question PTR _airport._tcp.local\\  \"QM\" question PTR _rdlink._tcp.local\\  \"QM\" question PTR _printer._tcp.local\\  \"QM\" question PTR _ptp._tcp.local\\  \"QM\" question PTR _uscan._tcp.local\\  \"QM\" question PTR _pdl-datastream._tcp.local\\  \"QM\" question PTR _ipp._tcp.local\\  \"QM\" question PTR _scanner._tcp.local\\  \"QM\" question PTR _ippusb._tcp.local\\  \"QM\" question PTR _ipps._tcp.local\\  \"QM\" question PTR _uscans._tcp.local\\  \"QM\" question PTR _daap._tcp.local\\  \"QM\" question PTR _touch-remote._tcp.local\\  \"QM\" question PTR _afpovertcp._tcp.local\\  \"QM\" question PTR _adisk._tcp.local\\  \"QM\" question PTR _apple-mobdev._tcp.local\\  \"QM\" question PTR _companion-link._tcp.local\\  \"QM\" question PTR 92f307d4._sub._apple-mobdev2._tcp.local\\  \"QM\" question PTR _apple-pairable._tcp.local\\  \"QM\" question TXT praneeth's mac._airplay._tcp.local\\  \"QM\" question PTR RBIHYD\u2019s MacBook Air._companion-link._tcp.local PTR Krishang\u2019s MacBook Air._companion-link._tcp.local PTR Poulam\u2019s MacBook Air._companion-link._tcp.local PTR Amit\u2019s MacBook Pro._companion-link._tcp.local PTR Charanjeet\u2019s MacBook Pro._companion-link._tcp.local PTR Aayush\u2019s MacBook Air._companion-link._tcp.local PTR Nishant\u2019s MacBook Air._companion-link._tcp.local PTR Sushmit\u2019s MacBook Air._companion-link._tcp.local",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 756
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 119,
+      "info": "5353 Standard query 0x0003 PTR _CC1AD845._sub._googlecast._tcp.local\\  \"QM\" question PTR _CC32E753._sub._googlecast._tcp.local\\  \"QM\" question PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "10.56.76.226",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 119
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "NBNS",
+      "length": 92,
+      "info": "137 Name query NB WPAD<00>",
+      "src": "10.56.102.228",
+      "dst": "10.56.255.255",
+      "flags": "",
+      "bytes": 92
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "NBNS",
+      "length": 92,
+      "info": "137 Name query NB LAPTOP-U0KMLPBC<1c>",
+      "src": "10.56.76.102",
+      "dst": "10.56.255.255",
+      "flags": "",
+      "bytes": 92
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "NBNS",
+      "length": 92,
+      "info": "137 Name query NB WPAD<00>",
+      "src": "10.56.102.228",
+      "dst": "10.56.255.255",
+      "flags": "",
+      "bytes": 92
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 296,
+      "info": "5353 Standard query response 0x0000 PTR DESKTOP-4H9KUTJ._dosvc._tcp.local SRV 0 0 7680 DESKTOP-4H9KUTJ.local TXT",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 296
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 113,
+      "info": "5353 Standard query 0x0000 ANY DESKTOP-4H9KUTJ._dosvc._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 113
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 139,
+      "info": "5353 Standard query 0x0003 PTR _CC1AD845._sub._googlecast._tcp.local\\  \"QM\" question PTR _CC32E753._sub._googlecast._tcp.local\\  \"QM\" question PTR _googlecast._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 139
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 1247,
+      "info": "5353 Standard query response 0x0000 TXT\\  cache flush PTR _airplay._tcp.local PTR praneeth's mac._airplay._tcp.local TXT\\  cache flush PTR _raop._tcp.local PTR 2E8707D002F3@praneeth's mac._raop._tcp.local SRV\\  cache flush 0 0 7000 praneeths-mac.local SRV\\  cache flush 0 0 7000 praneeths-mac.local TXT\\  cache flush PTR _companion-link._tcp.local PTR praneeth's mac._companion-link._tcp.local TXT SRV\\  cache flush 0 0 50428 praneeths-mac.local AAAA\\  cache flush fe80::413:2a74:896f:8214 A\\  cache flush 10.56.76.80 NSEC\\  cache flush praneeth's mac._airplay._tcp.local NSEC\\  cache flush 2E8707D002F3@praneeth's mac._raop._tcp.local NSEC\\  cache flush praneeth's mac._companion-link._tcp.local NSEC\\  cache flush praneeths-mac.local",
+      "src": "10.56.76.80",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 1247
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 1267,
+      "info": "5353 Standard query response 0x0000 TXT\\  cache flush PTR _airplay._tcp.local PTR praneeth's mac._airplay._tcp.local TXT\\  cache flush PTR _raop._tcp.local PTR 2E8707D002F3@praneeth's mac._raop._tcp.local SRV\\  cache flush 0 0 7000 praneeths-mac.local SRV\\  cache flush 0 0 7000 praneeths-mac.local TXT\\  cache flush PTR _companion-link._tcp.local PTR praneeth's mac._companion-link._tcp.local TXT SRV\\  cache flush 0 0 50428 praneeths-mac.local AAAA\\  cache flush fe80::413:2a74:896f:8214 A\\  cache flush 10.56.76.80 NSEC\\  cache flush praneeth's mac._airplay._tcp.local NSEC\\  cache flush 2E8707D002F3@praneeth's mac._raop._tcp.local NSEC\\  cache flush praneeth's mac._companion-link._tcp.local NSEC\\  cache flush praneeths-mac.local",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 1267
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 276,
+      "info": "5353 Standard query response 0x0000 PTR DESKTOP-4H9KUTJ._dosvc._tcp.local SRV 0 0 7680 DESKTOP-4H9KUTJ.local TXT",
+      "src": "10.56.71.244",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 276
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "ARP",
+      "length": 42,
+      "info": "Who has 10.56.76.80? Tell 10.56.75.254",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 42
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 93,
+      "info": "5353 Standard query 0x0000 ANY DESKTOP-4H9KUTJ._dosvc._tcp.local\\  \"QM\" question",
+      "src": "10.56.71.244",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 93
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 113,
+      "info": "5353 Standard query 0x0000 ANY DESKTOP-4H9KUTJ._dosvc._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 113
+    },
+    {
+      "time": "14:18:38",
+      "protocol": "MDNS",
+      "length": 465,
+      "info": "5353 Standard query response 0x0000 PTR vaishnavi\u2019s MacBook Air._companion-link._tcp.local TXT TXT\\  cache flush SRV\\  cache flush 0 0 50440 vaishnavis-MacBook-Air-2.local AAAA\\  cache flush fe80::4f4:1aa4:8d6b:884 A\\  cache flush 10.56.77.6 NSEC\\  cache flush vaishnavi\u2019s MacBook Air._companion-link._tcp.local NSEC\\  cache flush vaishnavis-MacBook-Air-2.local",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 465
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "MDNS",
+      "length": 93,
+      "info": "5353 Standard query 0x0000 ANY DESKTOP-4H9KUTJ._dosvc._tcp.local\\  \"QM\" question",
+      "src": "10.56.71.244",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 93
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "MDNS",
+      "length": 113,
+      "info": "5353 Standard query 0x0000 ANY DESKTOP-4H9KUTJ._dosvc._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 113
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "MDNS",
+      "length": 96,
+      "info": "5353 Standard query 0x0000 PTR _spotify-social-listening._tcp.local\\  \"QM\" question",
+      "src": "10.56.76.226",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 96
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "MDNS",
+      "length": 70,
+      "info": "5353 Standard query 0x0000 A wpad.local\\  \"QM\" question",
+      "src": "10.56.102.228",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 70
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "MDNS",
+      "length": 90,
+      "info": "5353 Standard query 0x0000 A wpad.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 90
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "MDNS",
+      "length": 116,
+      "info": "5353 Standard query 0x0000 PTR _spotify-social-listening._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 116
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "MDNS",
+      "length": 87,
+      "info": "5353 Standard query 0x0000 PTR _spotify-connect._tcp.local\\  \"QM\" question",
+      "src": "10.56.76.226",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 87
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "MDNS",
+      "length": 107,
+      "info": "5353 Standard query 0x0000 PTR _spotify-connect._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 107
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "NBNS",
+      "length": 92,
+      "info": "137 Name query NB WPAD<00>",
+      "src": "10.56.102.228",
+      "dst": "10.56.255.255",
+      "flags": "",
+      "bytes": 92
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "NBNS",
+      "length": 92,
+      "info": "137 Name query NB LAPTOP-U0KMLPBC<1c>",
+      "src": "10.56.76.102",
+      "dst": "10.56.255.255",
+      "flags": "",
+      "bytes": 92
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "NBNS",
+      "length": 92,
+      "info": "137 Name query NB WPAD<00>",
+      "src": "10.56.102.228",
+      "dst": "10.56.255.255",
+      "flags": "",
+      "bytes": 92
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "MDNS",
+      "length": 341,
+      "info": "5353 Standard query response 0x0000 PTR\\  cache flush DESKTOP-4H9KUTJ._dosvc._tcp.local SRV\\  cache flush 0 0 7680 DESKTOP-4H9KUTJ.local TXT\\  cache flush A\\  cache flush 10.56.71.244 AAAA\\  cache flush fe80::b1bc:80e4:7d31:24ac",
+      "src": "10.56.71.244",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 341
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "MDNS",
+      "length": 361,
+      "info": "5353 Standard query response 0x0000 PTR\\  cache flush DESKTOP-4H9KUTJ._dosvc._tcp.local SRV\\  cache flush 0 0 7680 DESKTOP-4H9KUTJ.local TXT\\  cache flush A\\  cache flush 10.56.71.244 AAAA\\  cache flush fe80::b1bc:80e4:7d31:24ac",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 361
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "MDNS",
+      "length": 277,
+      "info": "5353 Standard query response 0x0000 SRV\\  cache flush 0 0 7680 DESKTOP-4H9KUTJ.local TXT\\  cache flush A\\  cache flush 10.56.71.244 AAAA\\  cache flush fe80::b1bc:80e4:7d31:24ac",
+      "src": "10.56.71.244",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 277
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "MDNS",
+      "length": 297,
+      "info": "5353 Standard query response 0x0000 SRV\\  cache flush 0 0 7680 DESKTOP-4H9KUTJ.local TXT\\  cache flush A\\  cache flush 10.56.71.244 AAAA\\  cache flush fe80::b1bc:80e4:7d31:24ac",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 297
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "ARP",
+      "length": 42,
+      "info": "Who has 10.56.76.80? Tell 10.56.75.254",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 42
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "MDNS",
+      "length": 1247,
+      "info": "5353 Standard query response 0x0000 TXT\\  cache flush PTR _airplay._tcp.local PTR praneeth's mac._airplay._tcp.local TXT\\  cache flush PTR _raop._tcp.local PTR 2E8707D002F3@praneeth's mac._raop._tcp.local SRV\\  cache flush 0 0 7000 praneeths-mac.local SRV\\  cache flush 0 0 7000 praneeths-mac.local TXT\\  cache flush PTR _companion-link._tcp.local PTR praneeth's mac._companion-link._tcp.local TXT SRV\\  cache flush 0 0 50428 praneeths-mac.local AAAA\\  cache flush fe80::413:2a74:896f:8214 A\\  cache flush 10.56.76.80 NSEC\\  cache flush praneeth's mac._airplay._tcp.local NSEC\\  cache flush 2E8707D002F3@praneeth's mac._raop._tcp.local NSEC\\  cache flush praneeth's mac._companion-link._tcp.local NSEC\\  cache flush praneeths-mac.local",
+      "src": "10.56.76.80",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 1247
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "MDNS",
+      "length": 1267,
+      "info": "5353 Standard query response 0x0000 TXT\\  cache flush PTR _airplay._tcp.local PTR praneeth's mac._airplay._tcp.local TXT\\  cache flush PTR _raop._tcp.local PTR 2E8707D002F3@praneeth's mac._raop._tcp.local SRV\\  cache flush 0 0 7000 praneeths-mac.local SRV\\  cache flush 0 0 7000 praneeths-mac.local TXT\\  cache flush PTR _companion-link._tcp.local PTR praneeth's mac._companion-link._tcp.local TXT SRV\\  cache flush 0 0 50428 praneeths-mac.local AAAA\\  cache flush fe80::413:2a74:896f:8214 A\\  cache flush 10.56.76.80 NSEC\\  cache flush praneeth's mac._airplay._tcp.local NSEC\\  cache flush 2E8707D002F3@praneeth's mac._raop._tcp.local NSEC\\  cache flush praneeth's mac._companion-link._tcp.local NSEC\\  cache flush praneeths-mac.local",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 1267
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "MDNS",
+      "length": 347,
+      "info": "5353 Standard query response 0x0000 TXT\\  cache flush PTR _apple-mobdev2._tcp.local PTR f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local PTR f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local SRV\\  cache flush 0 0 32498 Yashs-iPhone.local AAAA\\  cache flush fe80::18a3:657f:91d3:5a2f A\\  cache flush 10.56.76.152 NSEC\\  cache flush f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local NSEC\\  cache flush Yashs-iPhone.local",
+      "src": "10.56.76.152",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 347
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "MDNS",
+      "length": 367,
+      "info": "5353 Standard query response 0x0000 TXT\\  cache flush PTR _apple-mobdev2._tcp.local PTR f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local PTR f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local SRV\\  cache flush 0 0 32498 Yashs-iPhone.local AAAA\\  cache flush fe80::18a3:657f:91d3:5a2f A\\  cache flush 10.56.76.152 NSEC\\  cache flush f8:71:a6:20:ed:0d@fe80::fa71:a6ff:fe20:ed0d-supportsRP-22._apple-mobdev2._tcp.local NSEC\\  cache flush Yashs-iPhone.local",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 367
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "NBNS",
+      "length": 110,
+      "info": "137 Registration NB PRANEETHS-MAC<00>",
+      "src": "10.56.76.80",
+      "dst": "10.56.255.255",
+      "flags": "",
+      "bytes": 110
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "MDNS",
+      "length": 87,
+      "info": "5353 Standard query 0x0000 PTR _spotify-connect._tcp.local\\  \"QM\" question",
+      "src": "10.56.76.80",
+      "dst": "224.0.0.251",
+      "flags": "",
+      "bytes": 87
+    },
+    {
+      "time": "14:18:39",
+      "protocol": "MDNS",
+      "length": 107,
+      "info": "5353 Standard query 0x0000 PTR _spotify-connect._tcp.local\\  \"QM\" question",
+      "src": "Unknown",
+      "dst": "Unknown",
+      "flags": "",
+      "bytes": 107
+    }
+  ]
+}
