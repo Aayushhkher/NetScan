@@ -1,29 +1,23 @@
-# NetScan
+# NetScan - Real-Time Network Traffic Analyzer
 
-A real-time network traffic analyzer with a modern GUI interface built in Python. Captures and displays network packets using TShark, showing protocols, IPs, and statistics. Features interactive filtering, protocol analysis, and a live dashboard for network monitoring.
+A powerful Python-based tool for real-time network traffic monitoring and analysis.
 
 ## Features
 
-- Real-time packet capture and display
-- Modern PyQt6-based GUI interface
-- Protocol-specific filtering (TCP, UDP, HTTP, DNS, ICMP)
-- Live network statistics dashboard
-- Detailed packet information display
-- Network interface selection
-- Custom BPF filter support
-- Session management and data persistence
-- Interactive packet analysis tools
+- Real-time packet capture and analysis
+- Interactive dashboard with protocol distribution
+- Network activity timeline visualization
+- Active connection monitoring
+- Safety analysis for suspicious traffic
+- Session-based traffic recording
 
 ## Requirements
 
 - Python 3.11+
 - PyQt6
-- TShark (Wireshark)
+- TShark (Wireshark CLI)
 - Matplotlib
-- Pandas
-- Scapy
-- Click
-- Rich
+- NumPy
 
 ## Installation
 
@@ -35,8 +29,8 @@ cd NetScan
 
 2. Create and activate a virtual environment:
 ```bash
-python -m venv .venv311
-source .venv311/bin/activate  # On Windows: .venv311\Scripts\activate
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 ```
 
 3. Install dependencies:
@@ -44,36 +38,36 @@ source .venv311/bin/activate  # On Windows: .venv311\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. Install TShark (Wireshark):
+4. Install TShark:
 - macOS: `brew install wireshark`
-- Linux: `sudo apt-get install wireshark`
-- Windows: Download from [Wireshark website](https://www.wireshark.org/download.html)
+- Linux: `sudo apt-get install tshark`
+- Windows: Download from Wireshark website
 
 ## Usage
 
-Run the application with sudo privileges (required for packet capture):
+Run the application:
 ```bash
-sudo python -m traffic_analyzer
+cd traffic_analyzer/src
+sudo python main.py --gui
 ```
-
-Or with specific options:
-```bash
-sudo python -m traffic_analyzer --interface eth0 --filter "tcp port 80" --gui
-```
-
-## Features in Detail
-
-- **Real-time Monitoring**: Live capture and display of network traffic
-- **Protocol Analysis**: Detailed breakdown of various network protocols
-- **Filtering**: Support for both GUI-based and BPF filters
-- **Statistics**: Live graphs and statistics for network usage
-- **Session Management**: Save and load capture sessions
-- **Export**: Export captured data for further analysis
 
 ## License
 
-MIT License - see LICENSE file for details
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0) - see the [LICENSE](LICENSE) file for details.
+
+This license:
+- Allows commercial use
+- Allows modifications
+- Allows distribution
+- Allows private use
+- Requires license and copyright notice inclusion
+- Requires same license for derivative works
+- Requires source code disclosure
 
 ## Author
 
-Aayush Kher 
+Aayush Kher
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. 
