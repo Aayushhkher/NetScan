@@ -5,7 +5,7 @@ import logging
 import argparse
 from PyQt6.QtWidgets import QApplication
 from PyQt6.QtCore import QThread, Qt
-from .gui.main_window import MainWindow
+from gui.main_window import MainWindow
 from datetime import datetime
 
 def main():

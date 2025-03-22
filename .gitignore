@@ -39,4 +39,9 @@ traffic_analyzer.log
 
 # OS
 .DS_Store
-Thumbs.db 
+Thumbs.db
+
+# Session files
+sessions/
+*.session
+*.json 

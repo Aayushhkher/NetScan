@@ -9,9 +9,15 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 import pandas as pd
 import datetime
-from traffic_analyzer.src.core.packet_sniffer import PacketSniffer
-from traffic_analyzer.src.utils.packet_analyzer import PacketAnalyzer
-from traffic_analyzer.src.gui.dashboard import DashboardWidget
+import sys
+import os
+
+# Add parent directory to Python path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+
+from core.packet_sniffer import PacketSniffer
+from utils.packet_analyzer import PacketAnalyzer
+from gui.dashboard import DashboardWidget
 import json
 import logging
 import time
@@ -377,7 +383,7 @@ class MainWindow(QMainWindow):
             self.packet_table.scrollToBottom()
             
             # Update dashboard
-            self.dashboard.update_stats(self.stats)
+            self.dashboard.update_dashboard(self.stats)
             
         except Exception as e:
             self.logger.error(f"Error processing packet: {e}")
@@ -391,8 +397,7 @@ class MainWindow(QMainWindow):
                 self.stats['packet_rate'] = self.stats['packet_count'] / elapsed if elapsed > 0 else 0
             
             # Update dashboard
-            self.dashboard.update_stat_cards(self.stats)
-            self.dashboard.update_protocol_chart(self.stats['protocol_stats'])
+            self.dashboard.update_dashboard(self.stats)
             
             # Update timeline with new packets (show last 50 packets for smoother updates)
             if self.packet_list:
