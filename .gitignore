@@ -41,10 +41,7 @@ traffic_analyzer.log
 .DS_Store
 Thumbs.db
 
-# Session files
-sessions/*.json
-
-# Session files
+# Session files and data
 sessions/
 *.session
 *.json 
