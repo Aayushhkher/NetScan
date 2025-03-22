@@ -53,16 +53,9 @@ sudo python main.py --gui
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0 (GPL-3.0) - see the [LICENSE](LICENSE) file for details.
+Copyright (c) 2025 Aayush Kher. All Rights Reserved.
 
-This license:
-- Allows commercial use
-- Allows modifications
-- Allows distribution
-- Allows private use
-- Requires license and copyright notice inclusion
-- Requires same license for derivative works
-- Requires source code disclosure
+This software is proprietary and confidential. Unauthorized copying, modification, distribution, or use of this software is strictly prohibited. For licensing inquiries, please contact the copyright holder.
 
 ## Author
 
