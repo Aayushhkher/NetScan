@@ -42,6 +42,9 @@ traffic_analyzer.log
 Thumbs.db
 
 # Session files
+sessions/*.json
+
+# Session files
 sessions/
 *.session
 *.json 

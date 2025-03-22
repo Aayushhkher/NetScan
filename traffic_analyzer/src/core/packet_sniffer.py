@@ -25,25 +25,24 @@ class PacketSniffer(QObject):
         self.session_packets = []
         self.session_start_time = None
         self.session_file = None
+        self.packet_buffer = []
+        self.buffer_size = 100
+        self.last_emit_time = time.time()
+        self.emit_interval = 0.1  # Emit packets every 100ms
         
-        # Define safe protocols and patterns
+        # Define safe protocols and patterns (reduced set for better performance)
         self.safe_protocols = {
             'TCP', 'UDP', 'ICMP', 'ARP', 'MDNS', 'DNS', 'DHCP', 'HTTP', 'HTTPS',
             'SSH', 'NTP', 'SNMP', 'SMB', 'NBNS', 'LLC', 'BROWSER'
         }
         
-        # Define suspicious patterns
+        # Define suspicious patterns (reduced set for better performance)
         self.suspicious_patterns = [
             r'portscan',
-            r'scan',
-            r'probe',
             r'attack',
             r'exploit',
             r'malware',
-            r'virus',
-            r'backdoor',
-            r'rootkit',
-            r'botnet'
+            r'virus'
         ]
         
         # Setup basic logging
@@ -51,7 +50,9 @@ class PacketSniffer(QObject):
         self.logger.setLevel(logging.DEBUG)
         
         # Create sessions directory if it doesn't exist
-        os.makedirs('sessions', exist_ok=True)
+        self.sessions_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))), 'sessions')
+        os.makedirs(self.sessions_dir, exist_ok=True)
+        os.chmod(self.sessions_dir, 0o755)  # Ensure directory is writable
     
     def get_interfaces(self):
         """Get list of available network interfaces."""
@@ -107,9 +108,9 @@ class PacketSniffer(QObject):
         self.session_start_time = datetime.datetime.now()
         self.session_packets = []
         
-        # Create new session file
+        # Create new session file with absolute path
         timestamp = self.session_start_time.strftime('%Y%m%d_%H%M%S')
-        self.session_file = f'sessions/session_{timestamp}.json'
+        self.session_file = os.path.join(self.sessions_dir, f'session_{timestamp}.json')
         
         try:
             # Basic tshark command with more fields
@@ -189,8 +190,22 @@ class PacketSniffer(QObject):
                 'packets': self.session_packets
             }
             try:
+                # Ensure the sessions directory exists
+                os.makedirs(self.sessions_dir, exist_ok=True)
+                
+                # Save the session file
                 with open(self.session_file, 'w') as f:
                     json.dump(session_data, f, indent=2)
+                
+                # Set proper permissions
+                os.chmod(self.session_file, 0o644)
+                
+                # Change ownership to current user if running as root
+                if os.geteuid() == 0:
+                    import pwd
+                    current_user = pwd.getpwuid(os.getuid())
+                    os.chown(self.session_file, current_user.pw_uid, current_user.pw_gid)
+                
                 self.logger.info(f"Session saved to {self.session_file}")
             except Exception as e:
                 self.logger.error(f"Error saving session: {e}")
@@ -215,7 +230,7 @@ class PacketSniffer(QObject):
                 try:
                     # Parse comma-separated fields
                     fields = line.strip().split(',')
-                    if len(fields) >= 9:  # Updated for new fields
+                    if len(fields) >= 9:
                         try:
                             number = int(fields[0]) if fields[0] else 0
                         except ValueError:
@@ -225,10 +240,9 @@ class PacketSniffer(QObject):
                         try:
                             timestamp = fields[1].strip()
                             if timestamp:
-                                # Convert timestamp to HH:MM:SS format
                                 time_parts = timestamp.split()
                                 if len(time_parts) >= 2:
-                                    time_str = time_parts[1].split('.')[0]  # Get time without microseconds
+                                    time_str = time_parts[1].split('.')[0]
                                 else:
                                     time_str = "00:00:00"
                             else:
@@ -244,7 +258,7 @@ class PacketSniffer(QObject):
                         try:
                             frame_len = int(fields[7]) if fields[7] else 0
                             ip_len = int(fields[8]) if fields[8] else 0
-                            length = max(frame_len, ip_len)  # Use the larger value
+                            length = max(frame_len, ip_len)
                         except ValueError:
                             length = 0
                             
@@ -263,22 +277,15 @@ class PacketSniffer(QObject):
                             'bytes': length
                         }
                         
-                        # Log packet size for debugging
-                        if length > 0:
-                            self.logger.debug(f"Packet captured - Size: {length} bytes")
+                        # Add to buffer
+                        self.packet_buffer.append(packet)
                         
-                        # Analyze packet safety
-                        safety_info = self._analyze_packet_safety(packet)
-                        packet['safety'] = safety_info
-                        
-                        # Add to session packets
-                        self.session_packets.append(packet)
-                        
-                        # Emit packet captured signal
-                        self.packet_captured.emit({
-                            'data': packet,
-                            'safety': safety_info
-                        })
+                        # Check if we should emit packets
+                        current_time = time.time()
+                        if (len(self.packet_buffer) >= self.buffer_size or 
+                            current_time - self.last_emit_time >= self.emit_interval):
+                            self._emit_buffered_packets()
+                            self.last_emit_time = current_time
                         
                 except (ValueError, IndexError) as e:
                     self.logger.error(f"Error parsing packet data: {e}")
@@ -290,6 +297,47 @@ class PacketSniffer(QObject):
         finally:
             if self.is_capturing:
                 self.stop_capture()
+
+    def _emit_buffered_packets(self):
+        """Emit buffered packets with batch safety analysis."""
+        if not self.packet_buffer:
+            return
+            
+        # Process packets in batch
+        for packet in self.packet_buffer:
+            # Quick safety check
+            safety_info = {
+                'is_safe': True,
+                'warnings': [],
+                'risk_level': 'low'
+            }
+            
+            # Check protocol
+            protocol = packet.get('protocol', '')
+            if protocol not in self.safe_protocols:
+                safety_info['warnings'].append(f"Uncommon protocol: {protocol}")
+                safety_info['is_safe'] = False
+                safety_info['risk_level'] = 'medium'
+            
+            # Check info for suspicious patterns (only if protocol check failed)
+            if not safety_info['is_safe']:
+                info = packet.get('info', '').lower()
+                for pattern in self.suspicious_patterns:
+                    if pattern in info:
+                        safety_info['warnings'].append(f"Suspicious pattern: {pattern}")
+                        safety_info['risk_level'] = 'high'
+            
+            # Add to session packets
+            self.session_packets.append(packet)
+            
+            # Emit packet with safety info
+            self.packet_captured.emit({
+                'data': packet,
+                'safety': safety_info
+            })
+        
+        # Clear buffer
+        self.packet_buffer.clear()
 
     def _analyze_packet_safety(self, packet_info):
         """Analyze if a packet is safe or suspicious."""

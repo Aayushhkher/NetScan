@@ -13,6 +13,7 @@ import pandas as pd
 from datetime import datetime
 import numpy as np
 import logging
+import time
 
 class StatCard(QFrame):
     """A card widget to display a single statistic."""
@@ -60,6 +61,9 @@ class DashboardWidget(QWidget):
         super().__init__(parent)
         self.setup_ui()
         self.packet_history = []
+        self.last_update_time = time.time()
+        self.update_interval = 0.1  # Update UI every 100ms
+        self.pending_updates = 0
         
     def setup_ui(self):
         """Initialize the user interface."""
@@ -233,12 +237,16 @@ class DashboardWidget(QWidget):
                 protocols = list(protocol_stats.keys())
                 counts = list(protocol_stats.values())
                 
-                # Create pie chart
-                self.protocol_ax.pie(counts, labels=protocols, autopct='%1.1f%%')
-                self.protocol_ax.set_title('Protocol Distribution')
+                # Create pie chart with optimized settings
+                self.protocol_ax.pie(counts, labels=protocols, autopct='%1.1f%%', 
+                                   textprops={'fontsize': 8},  # Smaller font size
+                                   pctdistance=0.85)  # Move percentage labels closer to center
+                self.protocol_ax.set_title('Protocol Distribution', fontsize=10)
             
-            self.protocol_fig.tight_layout()
-            self.protocol_canvas.draw()
+            # Use tight layout with reduced padding
+            self.protocol_fig.tight_layout(pad=0.5)
+            self.protocol_canvas.draw_idle()  # Use draw_idle for better performance
+            
         except Exception as e:
             logging.error(f"Error updating protocol chart: {str(e)}")
     
@@ -255,52 +263,49 @@ class DashboardWidget(QWidget):
                 bytes_transferred = []
                 total_bytes = 0
                 
-                for p in packet_data:
+                # Process only the last 100 packets for better performance
+                for p in packet_data[-100:]:
                     try:
-                        # Convert time string to datetime
                         time_str = p.get('time', '00:00:00')
                         bytes_val = p.get('length', 0)
-                        
-                        # Add to running total
                         total_bytes += bytes_val
-                        
                         times.append(time_str)
                         bytes_transferred.append(total_bytes)
                     except Exception as e:
                         logging.error(f"Error processing packet for timeline: {e}")
                         continue
                 
-                # Create line plot
+                # Create line plot with optimized settings
                 if times and bytes_transferred:
-                    # Plot with a blue line and markers
-                    self.timeline_ax.plot(range(len(times)), bytes_transferred, '-b', linewidth=2, marker='o', markersize=4)
+                    self.timeline_ax.plot(range(len(times)), bytes_transferred, 
+                                       '-b', linewidth=1, marker='o', markersize=2)
                     
-                    # Set x-axis labels
+                    # Set x-axis labels with reduced number of ticks
                     num_ticks = min(5, len(times))
                     if num_ticks > 0:
                         tick_positions = np.linspace(0, len(times) - 1, num_ticks, dtype=int)
                         self.timeline_ax.set_xticks(tick_positions)
-                        self.timeline_ax.set_xticklabels([times[i] for i in tick_positions], rotation=45)
+                        self.timeline_ax.set_xticklabels([times[i] for i in tick_positions], 
+                                                       rotation=45, fontsize=8)
                     
-                    # Add labels and grid
-                    self.timeline_ax.set_title('Network Activity Timeline')
-                    self.timeline_ax.set_xlabel('Time')
-                    self.timeline_ax.set_ylabel('Total Bytes Transferred')
-                    self.timeline_ax.grid(True, linestyle='--', alpha=0.7)
+                    self.timeline_ax.set_title('Network Activity Timeline', fontsize=10)
+                    self.timeline_ax.set_xlabel('Time', fontsize=8)
+                    self.timeline_ax.set_ylabel('Total Bytes Transferred', fontsize=8)
+                    self.timeline_ax.grid(True, linestyle='--', alpha=0.3)
                     
-                    # Format y-axis to show bytes in human-readable format
+                    # Format y-axis with reduced precision
                     self.timeline_ax.yaxis.set_major_formatter(
                         plt.FuncFormatter(lambda x, p: self.format_size(x))
                     )
                     
-                    # Auto-scale the y-axis with some padding
+                    # Auto-scale with reduced padding
                     y_min, y_max = self.timeline_ax.get_ylim()
-                    padding = (y_max - y_min) * 0.1
+                    padding = (y_max - y_min) * 0.05
                     self.timeline_ax.set_ylim(y_min - padding, y_max + padding)
             
-            # Adjust layout and draw
-            self.timeline_fig.tight_layout()
-            self.timeline_canvas.draw()
+            # Use tight layout with reduced padding
+            self.timeline_fig.tight_layout(pad=0.5)
+            self.timeline_canvas.draw_idle()  # Use draw_idle for better performance
             
         except Exception as e:
             logging.error(f"Error updating timeline chart: {e}")
@@ -347,20 +352,44 @@ class DashboardWidget(QWidget):
     def update_dashboard(self, stats):
         """Update dashboard with current statistics."""
         try:
-            # Update statistics cards
+            current_time = time.time()
+            
+            # Always update stat cards as they're lightweight
             self.total_packets_card.set_value(stats.get('packet_count', 0))
             self.packet_rate_card.set_value(f"{stats.get('packet_rate', 0):.2f}")
             self.data_transfer_card.set_value(self.format_size(stats.get('data_transferred', 0)))
             self.connections_card.set_value(len(stats.get('active_connections', set())))
             
-            # Update protocol distribution chart
-            self.update_protocol_chart(stats.get('protocol_stats', {}))
+            # Increment pending updates counter
+            self.pending_updates += 1
             
-            # Update network activity timeline
-            self.update_timeline_chart(stats.get('timeline_data', []))
+            # Check if we should update charts and tables
+            if current_time - self.last_update_time >= self.update_interval:
+                # Update protocol distribution chart
+                self.update_protocol_chart(stats.get('protocol_stats', {}))
+                
+                # Update network activity timeline
+                self.update_timeline_chart(stats.get('timeline_data', []))
+                
+                # Update tables
+                connections = [
+                    {
+                        'src': p['src'],
+                        'dst': p['dst'],
+                        'protocol': p['protocol'],
+                        'status': p['flags']
+                    }
+                    for p in stats.get('timeline_data', [])[-50:]  # Show last 50 connections
+                ]
+                self.update_tables(stats.get('protocol_stats', {}), connections)
+                
+                self.last_update_time = current_time
+                self.pending_updates = 0
             
-            # Force update
-            self.update()
+            # Force update only if we have enough pending updates
+            if self.pending_updates >= 10:
+                self.update()
+                self.pending_updates = 0
             
         except Exception as e:
             logging.error(f"Error updating dashboard: {str(e)}")

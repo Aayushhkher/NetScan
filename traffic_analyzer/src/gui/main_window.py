@@ -54,6 +54,9 @@ class MainWindow(QMainWindow):
             'start_time': None
         }
         self.packet_list = []
+        self.pending_updates = 0
+        self.last_update_time = time.time()
+        self.update_interval = 0.1  # Update UI every 100ms
         
         # Setup UI
         self.setup_ui()
@@ -379,8 +382,20 @@ class MainWindow(QMainWindow):
                 warnings_item.setForeground(Qt.GlobalColor.red)
             self.packet_table.setItem(row, 7, warnings_item)
             
-            # Scroll to the bottom
-            self.packet_table.scrollToBottom()
+            # Increment pending updates counter
+            self.pending_updates += 1
+            
+            # Check if we should update the UI
+            current_time = time.time()
+            if current_time - self.last_update_time >= self.update_interval:
+                self.update_dashboard()
+                self.last_update_time = current_time
+                self.pending_updates = 0
+            
+            # Scroll to the bottom only if we have enough pending updates
+            if self.pending_updates >= 10:
+                self.packet_table.scrollToBottom()
+                self.pending_updates = 0
             
             # Update dashboard
             self.dashboard.update_dashboard(self.stats)
