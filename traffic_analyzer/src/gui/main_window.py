@@ -15,9 +15,9 @@ import os
 # Add parent directory to Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-from core.packet_sniffer import PacketSniffer
-from utils.packet_analyzer import PacketAnalyzer
-from gui.dashboard import DashboardWidget
+from traffic_analyzer.src.core.packet_sniffer import PacketSniffer
+from traffic_analyzer.src.utils.packet_analyzer import PacketAnalyzer
+from traffic_analyzer.src.gui.dashboard import DashboardWidget
 import json
 import logging
 import time
@@ -32,7 +32,7 @@ class MainWindow(QMainWindow):
         
         # Configure logging
         self.logger = logging.getLogger(__name__)
-        self.logger.setLevel(logging.DEBUG)
+        self.logger.setLevel(logging.INFO)  # Reduced from DEBUG to INFO
         
         # Add file handler for logging
         log_file = 'traffic_analyzer.log'
@@ -56,7 +56,9 @@ class MainWindow(QMainWindow):
         self.packet_list = []
         self.pending_updates = 0
         self.last_update_time = time.time()
-        self.update_interval = 0.1  # Update UI every 100ms
+        self.update_interval = 0.2  # Increased from 0.1 to 0.2 for smoother updates
+        self.packet_buffer = []  # Buffer for packet processing
+        self.buffer_size = 50  # Process packets in batches
         
         # Setup UI
         self.setup_ui()
@@ -68,7 +70,7 @@ class MainWindow(QMainWindow):
         # Setup update timer
         self.update_timer = QTimer()
         self.update_timer.timeout.connect(self.update_dashboard)
-        self.update_timer.start(1000)  # Update every second
+        self.update_timer.start(200)  # Increased from 1000 to 200ms for smoother updates
         
         # Refresh interfaces on startup
         self.refresh_interfaces()
@@ -283,7 +285,7 @@ class MainWindow(QMainWindow):
     
     def toggle_capture(self):
         """Toggle packet capture on/off."""
-        if not self.packet_sniffer.is_capturing:
+        if not self.packet_sniffer.is_running:
             interface = self.interface_combo.currentText()
             filter_text = self.filter_input.text()
             
@@ -341,29 +343,73 @@ class MainWindow(QMainWindow):
     def process_packet(self, packet_info):
         """Process a captured packet and update the UI."""
         try:
-            packet_data = packet_info['data']
-            safety_info = packet_info.get('safety', {})
+            # Add to buffer
+            self.packet_buffer.append(packet_info)
             
-            # Update statistics
-            self.stats['packet_count'] += 1
-            self.stats['data_transferred'] += packet_data.get('bytes', 0)
+            # Process buffer if it's full or enough time has passed
+            current_time = time.time()
+            if (len(self.packet_buffer) >= self.buffer_size or 
+                current_time - self.last_update_time >= self.update_interval):
+                self._process_packet_buffer()
+                self.last_update_time = current_time
             
-            # Update protocol statistics
-            protocol = packet_data.get('protocol', 'Unknown')
-            if protocol not in self.stats['protocol_stats']:
-                self.stats['protocol_stats'][protocol] = 0
-            self.stats['protocol_stats'][protocol] += 1
+        except Exception as e:
+            self.logger.error(f"Error processing packet: {e}")
+    
+    def _process_packet_buffer(self):
+        """Process buffered packets in batch."""
+        if not self.packet_buffer:
+            return
             
-            # Add to packet list
-            self.packet_list.append(packet_data)
+        try:
+            # Process all packets in buffer
+            for packet_info in self.packet_buffer:
+                packet_data = packet_info.get('data', {})
+                safety_info = packet_info.get('safety', {})
+                
+                # Update statistics
+                self.stats['packet_count'] += 1
+                self.stats['data_transferred'] += packet_data.get('bytes', 0)
+                
+                # Update protocol statistics
+                protocol = packet_data.get('protocol', 'Unknown')
+                if protocol not in self.stats['protocol_stats']:
+                    self.stats['protocol_stats'][protocol] = 0
+                self.stats['protocol_stats'][protocol] += 1
+                
+                # Update active connections
+                src = packet_data.get('src', 'Unknown')
+                dst = packet_data.get('dst', 'Unknown')
+                if src != 'Unknown' and dst != 'Unknown':
+                    self.stats['active_connections'].add(f"{src} → {dst}")
+                
+                # Add to packet list (keep only last 1000 packets)
+                self.packet_list.append(packet_data)
+                if len(self.packet_list) > 1000:
+                    self.packet_list.pop(0)
+                
+                # Update packet table
+                self._update_packet_table(packet_data, safety_info)
             
-            # Update packet table
+            # Clear buffer
+            self.packet_buffer.clear()
+            
+            # Update dashboard with all protocols
+            self.update_dashboard()
+            
+        except Exception as e:
+            self.logger.error(f"Error processing packet buffer: {e}")
+            self.packet_buffer.clear()
+    
+    def _update_packet_table(self, packet_data, safety_info):
+        """Update packet table with new packet."""
+        try:
             row = self.packet_table.rowCount()
             self.packet_table.insertRow(row)
             
             # Set cell values
             self.packet_table.setItem(row, 0, QTableWidgetItem(packet_data.get('time', '')))
-            self.packet_table.setItem(row, 1, QTableWidgetItem(protocol))
+            self.packet_table.setItem(row, 1, QTableWidgetItem(packet_data.get('protocol', 'Unknown')))
             self.packet_table.setItem(row, 2, QTableWidgetItem(str(packet_data.get('length', 0))))
             self.packet_table.setItem(row, 3, QTableWidgetItem(packet_data.get('src', 'Unknown')))
             self.packet_table.setItem(row, 4, QTableWidgetItem(packet_data.get('dst', 'Unknown')))
@@ -382,26 +428,12 @@ class MainWindow(QMainWindow):
                 warnings_item.setForeground(Qt.GlobalColor.red)
             self.packet_table.setItem(row, 7, warnings_item)
             
-            # Increment pending updates counter
-            self.pending_updates += 1
-            
-            # Check if we should update the UI
-            current_time = time.time()
-            if current_time - self.last_update_time >= self.update_interval:
-                self.update_dashboard()
-                self.last_update_time = current_time
-                self.pending_updates = 0
-            
-            # Scroll to the bottom only if we have enough pending updates
-            if self.pending_updates >= 10:
+            # Scroll to bottom only if we're at the bottom
+            if self.packet_table.verticalScrollBar().value() == self.packet_table.verticalScrollBar().maximum():
                 self.packet_table.scrollToBottom()
-                self.pending_updates = 0
-            
-            # Update dashboard
-            self.dashboard.update_dashboard(self.stats)
             
         except Exception as e:
-            self.logger.error(f"Error processing packet: {e}")
+            self.logger.error(f"Error updating packet table: {e}")
     
     def update_dashboard(self):
         """Update the dashboard with current statistics."""
@@ -411,24 +443,31 @@ class MainWindow(QMainWindow):
                 elapsed = time.time() - self.stats['start_time']
                 self.stats['packet_rate'] = self.stats['packet_count'] / elapsed if elapsed > 0 else 0
             
-            # Update dashboard
-            self.dashboard.update_dashboard(self.stats)
-            
-            # Update timeline with new packets (show last 50 packets for smoother updates)
-            if self.packet_list:
-                self.dashboard.update_timeline_chart(self.packet_list[-50:])
-            
-            # Update tables
-            connections = [
-                {
-                    'src': p['src'],
-                    'dst': p['dst'],
-                    'protocol': p['protocol'],
-                    'status': p['flags']
-                }
-                for p in self.packet_list[-50:]  # Show last 50 connections
-            ]
-            self.dashboard.update_tables(self.stats['protocol_stats'], connections)
+            # Format stats for dashboard
+            dashboard_stats = {
+                'total_packets': self.stats['packet_count'],
+                'packet_rate': self.stats['packet_rate'],
+                'total_bytes': self.stats['data_transferred'],
+                'active_connections': len(self.stats['active_connections']),
+                'protocol_stats': self.stats['protocol_stats'],
+                'packet_history': [
+                    {
+                        'time': p.get('time', '00:00:00'),
+                        'length': p.get('length', 0),
+                        'protocol': p.get('protocol', 'Unknown')
+                    }
+                    for p in self.packet_list[-100:]  # Last 100 packets for timeline
+                ],
+                'connections': [
+                    {
+                        'source': p.get('src', 'Unknown'),
+                        'destination': p.get('dst', 'Unknown'),
+                        'protocol': p.get('protocol', 'Unknown'),
+                        'state': p.get('flags', '')
+                    }
+                    for p in self.packet_list[-50:]  # Last 50 connections
+                ]
+            }
             
             # Update capture time
             if self.stats['start_time']:
@@ -436,12 +475,10 @@ class MainWindow(QMainWindow):
                 hours = elapsed // 3600
                 minutes = (elapsed % 3600) // 60
                 seconds = elapsed % 60
-                self.dashboard.capture_time.setText(
-                    f"Capture Time: {hours:02d}:{minutes:02d}:{seconds:02d}"
-                )
+                dashboard_stats['capture_time'] = f"{hours:02d}:{minutes:02d}:{seconds:02d}"
             
-            # Force update
-            self.dashboard.update()
+            # Update dashboard with formatted stats
+            self.dashboard.update_dashboard(dashboard_stats)
             
         except Exception as e:
             self.logger.error(f"Error updating dashboard: {str(e)}")
@@ -453,7 +490,7 @@ class MainWindow(QMainWindow):
     
     def closeEvent(self, event):
         """Handle application closure."""
-        if self.packet_sniffer.is_capturing:
+        if self.packet_sniffer.is_running:
             self.packet_sniffer.stop_capture()
         event.accept()
 
@@ -467,10 +504,10 @@ class MainWindow(QMainWindow):
             # Set new filter
             self.filter_input.setText(filter_text)
             
-        # If capture is running, restart it with new filter
-        if self.packet_sniffer.is_capturing:
-            self.toggle_capture()  # Stop
-            self.toggle_capture()  # Start with new filter 
+            # If capture is running, restart it with new filter
+            if self.packet_sniffer.is_running:
+                self.toggle_capture()  # Stop
+                self.toggle_capture()  # Start with new filter 
 
     def set_interface(self, interface):
         """Set the network interface for packet capture."""

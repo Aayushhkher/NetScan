@@ -138,7 +138,7 @@ class DashboardWidget(QWidget):
         # Tables Row
         tables_layout = QHBoxLayout()
         
-        # Protocol Table
+        # Protocol Stats Table
         protocol_table_frame = QFrame()
         protocol_table_frame.setFrameStyle(QFrame.Shape.StyledPanel | QFrame.Shadow.Raised)
         protocol_table_frame.setStyleSheet("background-color: white; border-radius: 8px;")
@@ -151,20 +151,10 @@ class DashboardWidget(QWidget):
         
         self.protocol_table = QTableWidget()
         self.protocol_table.setColumnCount(3)
-        self.protocol_table.setHorizontalHeaderLabels(["Protocol", "Count", "Size"])
-        self.protocol_table.setStyleSheet("""
-            QTableWidget {
-                gridline-color: #dee2e6;
-                border: none;
-            }
-            QHeaderView::section {
-                background-color: #f8f9fa;
-                padding: 4px;
-                border: 1px solid #dee2e6;
-                font-weight: bold;
-            }
-        """)
+        self.protocol_table.setHorizontalHeaderLabels(["Protocol", "Count", "Percentage"])
+        self.protocol_table.horizontalHeader().setStretchLastSection(True)
         protocol_table_layout.addWidget(self.protocol_table)
+        
         tables_layout.addWidget(protocol_table_frame)
         
         # Connections Table
@@ -180,51 +170,23 @@ class DashboardWidget(QWidget):
         
         self.connections_table = QTableWidget()
         self.connections_table.setColumnCount(4)
-        self.connections_table.setHorizontalHeaderLabels(["Source", "Destination", "Protocol", "Status"])
-        self.connections_table.setStyleSheet("""
-            QTableWidget {
-                gridline-color: #dee2e6;
-                border: none;
-            }
-            QHeaderView::section {
-                background-color: #f8f9fa;
-                padding: 4px;
-                border: 1px solid #dee2e6;
-                font-weight: bold;
-            }
-        """)
+        self.connections_table.setHorizontalHeaderLabels(["Source", "Destination", "Protocol", "State"])
+        self.connections_table.horizontalHeader().setStretchLastSection(True)
         connections_table_layout.addWidget(self.connections_table)
+        
         tables_layout.addWidget(connections_table_frame)
         
         layout.addLayout(tables_layout)
         
         self.setLayout(layout)
         
-        # Set up color scheme for protocol chart
-        self.protocol_colors = {
-            'TCP': '#007bff',
-            'UDP': '#28a745',
-            'HTTP': '#17a2b8',
-            'DNS': '#ffc107',
-            'ICMP': '#dc3545',
-            'TLS': '#6610f2',
-            'Other': '#6c757d'
-        }
-        
-        # Initialize empty charts
-        self.update_protocol_chart({})
-        self.update_timeline_chart([])
-        
     def update_stat_cards(self, stats):
-        """Update the stat cards with new values"""
-        try:
-            self.total_packets_card.set_value(stats.get('packet_count', 0))
-            self.packet_rate_card.set_value(f"{stats.get('packet_rate', 0):.2f}")
-            self.data_transfer_card.set_value(self.format_size(stats.get('data_transferred', 0)))
-            self.connections_card.set_value(len(stats.get('active_connections', set())))
-        except Exception as e:
-            print(f"Error updating stat cards: {str(e)}")
-    
+        """Update the statistics cards with new values."""
+        self.total_packets_card.set_value(stats.get('total_packets', 0))
+        self.packet_rate_card.set_value(f"{stats.get('packet_rate', 0):.1f}")
+        self.data_transfer_card.set_value(self.format_size(stats.get('total_bytes', 0)))
+        self.connections_card.set_value(stats.get('active_connections', 0))
+        
     def update_protocol_chart(self, protocol_stats):
         """Update the protocol distribution pie chart"""
         try:
@@ -292,7 +254,7 @@ class DashboardWidget(QWidget):
                     self.timeline_ax.set_xlabel('Time', fontsize=8)
                     self.timeline_ax.set_ylabel('Total Bytes Transferred', fontsize=8)
                     self.timeline_ax.grid(True, linestyle='--', alpha=0.3)
-                    
+            
                     # Format y-axis with reduced precision
                     self.timeline_ax.yaxis.set_major_formatter(
                         plt.FuncFormatter(lambda x, p: self.format_size(x))
@@ -311,113 +273,63 @@ class DashboardWidget(QWidget):
             logging.error(f"Error updating timeline chart: {e}")
     
     def update_tables(self, protocol_stats, connections):
-        """Update the protocol and connections tables"""
-        try:
-            # Update protocol table
-            self.protocol_table.setRowCount(len(protocol_stats))
-            for i, (protocol, count) in enumerate(protocol_stats.items()):
-                self.protocol_table.setItem(i, 0, QTableWidgetItem(protocol))
-                self.protocol_table.setItem(i, 1, QTableWidgetItem(str(count)))
-                self.protocol_table.setItem(i, 2, QTableWidgetItem(self.format_size(count)))
-            
-            # Update connections table
-            self.connections_table.setRowCount(len(connections))
-            for i, conn in enumerate(connections):
-                self.connections_table.setItem(i, 0, QTableWidgetItem(conn['src']))
-                self.connections_table.setItem(i, 1, QTableWidgetItem(conn['dst']))
-                self.connections_table.setItem(i, 2, QTableWidgetItem(conn['protocol']))
-                self.connections_table.setItem(i, 3, QTableWidgetItem(conn['status']))
-        except Exception as e:
-            print(f"Error updating tables: {str(e)}")
+        """Update the protocol and connections tables."""
+        # Update protocol table
+        self.protocol_table.setRowCount(len(protocol_stats))
+        total_packets = sum(protocol_stats.values())
+        
+        for i, (protocol, count) in enumerate(protocol_stats.items()):
+            self.protocol_table.setItem(i, 0, QTableWidgetItem(protocol))
+            self.protocol_table.setItem(i, 1, QTableWidgetItem(str(count)))
+            percentage = (count / total_packets * 100) if total_packets > 0 else 0
+            self.protocol_table.setItem(i, 2, QTableWidgetItem(f"{percentage:.1f}%"))
+        
+        # Update connections table
+        self.connections_table.setRowCount(len(connections))
+        for i, conn in enumerate(connections):
+            self.connections_table.setItem(i, 0, QTableWidgetItem(conn.get('source', '')))
+            self.connections_table.setItem(i, 1, QTableWidgetItem(conn.get('destination', '')))
+            self.connections_table.setItem(i, 2, QTableWidgetItem(conn.get('protocol', '')))
+            self.connections_table.setItem(i, 3, QTableWidgetItem(conn.get('state', '')))
     
     @staticmethod
     def format_size(size_bytes):
-        """Format size in bytes to human readable string"""
+        """Format bytes size to human readable format."""
         for unit in ['B', 'KB', 'MB', 'GB']:
             if size_bytes < 1024:
-                return f"{size_bytes:.2f} {unit}"
+                return f"{size_bytes:.1f} {unit}"
             size_bytes /= 1024
-        return f"{size_bytes:.2f} TB"
-
-    def update_tcp_flags_chart(self, flags_stats):
-        """Update the TCP flags distribution chart."""
-        # This method can be implemented if needed
-        pass
-        
-    def update_ports_chart(self, port_stats):
-        """Update the port distribution chart."""
-        # This method can be implemented if needed
-        pass
-
+        return f"{size_bytes:.1f} TB"
+    
     def update_dashboard(self, stats):
-        """Update dashboard with current statistics."""
+        """Update all dashboard components with new statistics."""
         try:
             current_time = time.time()
-            
-            # Always update stat cards as they're lightweight
-            self.total_packets_card.set_value(stats.get('packet_count', 0))
-            self.packet_rate_card.set_value(f"{stats.get('packet_rate', 0):.2f}")
-            self.data_transfer_card.set_value(self.format_size(stats.get('data_transferred', 0)))
-            self.connections_card.set_value(len(stats.get('active_connections', set())))
-            
-            # Increment pending updates counter
             self.pending_updates += 1
             
-            # Check if we should update charts and tables
+            # Only update if enough time has passed since last update
             if current_time - self.last_update_time >= self.update_interval:
-                # Update protocol distribution chart
-                self.update_protocol_chart(stats.get('protocol_stats', {}))
+                # Update statistics cards
+                self.update_stat_cards(stats)
                 
-                # Update network activity timeline
-                self.update_timeline_chart(stats.get('timeline_data', []))
+                # Update protocol distribution chart
+                if 'protocol_stats' in stats:
+                    self.update_protocol_chart(stats['protocol_stats'])
+                
+                # Update timeline chart
+                if 'packet_history' in stats:
+                    self.update_timeline_chart(stats['packet_history'])
                 
                 # Update tables
-                connections = [
-                    {
-                        'src': p['src'],
-                        'dst': p['dst'],
-                        'protocol': p['protocol'],
-                        'status': p['flags']
-                    }
-                    for p in stats.get('timeline_data', [])[-50:]  # Show last 50 connections
-                ]
-                self.update_tables(stats.get('protocol_stats', {}), connections)
+                if 'protocol_stats' in stats and 'connections' in stats:
+                    self.update_tables(stats['protocol_stats'], stats['connections'])
+                
+                # Update capture time
+                if 'capture_time' in stats:
+                    self.capture_time.setText(f"Capture Time: {stats['capture_time']}")
                 
                 self.last_update_time = current_time
                 self.pending_updates = 0
             
-            # Force update only if we have enough pending updates
-            if self.pending_updates >= 10:
-                self.update()
-                self.pending_updates = 0
-            
         except Exception as e:
-            logging.error(f"Error updating dashboard: {str(e)}")
-
-    def update_timeline(self, timeline_data):
-        """Update network activity timeline."""
-        try:
-            # Clear previous data
-            self.timeline_ax.clear()
-            
-            if not timeline_data:
-                self.timeline_ax.text(0.5, 0.5, 'No data', ha='center', va='center')
-            else:
-                # Prepare data
-                times = [d['time'] for d in timeline_data]
-                bytes_transferred = [d['bytes'] for d in timeline_data]
-                
-                # Create line plot
-                self.timeline_ax.plot(times, bytes_transferred, '-o')
-                self.timeline_ax.set_title('Network Activity Timeline')
-                self.timeline_ax.set_xlabel('Time')
-                self.timeline_ax.set_ylabel('Bytes Transferred')
-                self.timeline_ax.grid(True)
-                
-                # Rotate x-axis labels for better readability
-                plt.setp(self.timeline_ax.get_xticklabels(), rotation=45)
-            
-            self.timeline_fig.tight_layout()
-            self.timeline_canvas.draw()
-        except Exception as e:
-            logging.error(f"Error updating timeline: {str(e)}") 
+            logging.error(f"Error updating dashboard: {str(e)}") 
